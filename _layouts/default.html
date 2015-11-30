@@ -57,7 +57,7 @@
             <aside id="recent-posts-widget" class="widget">
               <h3 class="widget-title">Recent Posts</h3>
               <ul>
-                {% for post in site.posts limit:20 %}
+                {% for post in site.posts limit:5 %}
                 <li>             
                   <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
                   <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
