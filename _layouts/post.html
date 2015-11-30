@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<article class="post">
+  <div class="blog-item-wrap">
+    <div class="post-inner-content">
+      <header class="entry-header page-header">
+        <h1 class="entry-title">{{ page.title }}</h1>
+        <div class="entry-meta">
+          <span class="posted-on"><i class="fa fa-calendar"></i>&nbsp;{{ page.date | date: "%B %e, %Y" }}</span>
+          <span class="comments-link"> 
+            <i class="fa fa-comment-o"></i>&nbsp;<a href="#disqus_thread" data-disqus-identifier="{{ page.uuid }}"></a>
+          </span>
+          {% if page.categories != empty %}
+            <span class="cat-links">
+              <i class="fa fa-folder-open-o"></i>
+              {% for category in page.categories %}
+                <a href="{{ site.url }}/category/{{ category | cgi_encode }}" title="Posts in category {{ category }}">{{ category }}</a>
+              {% endfor %}
+            </span>
+          {% endif %}
+        </div>
+      </header>
+      <div class="entry-content">
+        {{ content }}
+      </div>
+
+      <footer class="entry-meta">
+        {% if page.tags != empty %}
+          <div class="tagcloud">
+            {% for tag in page.tags %}
+              <a href="{{site.url}}/tags/{{ tag | cgi_encode }}" title="Posts tagged {{ tag }}" rel="tag">{{tag}}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </footer>
+    </div>
+
+    <div class="post-inner-content secondary-content-box">
+      {% include disqus.html %}
+    </div>
+  </div>
+</article>

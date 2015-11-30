@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/highlight/styles/default.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/highlight/styles/tomorrow.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel='stylesheet' id='sparkling-fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A400italic%2C400%2C600%2C700%7CRoboto+Slab%3A400%2C300%2C700&#038;ver=4.3.1' type='text/css' media='all' />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="row">
+          <div class="site-navigation-inner col-sm-12">
+            <div class="navbar-header">
+              <button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <div id="logo">
+                <span class="site-name"><a class="navbar-brand" href="https://blog.mikesir87.io/" title="mikesir87's musings" rel="home">mikesir87's musings</a></span>
+              </div><!-- end of #logo -->
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container main-content-area">
+      <div class="row">
+        <div class="main-content-inner col-sm-12 col-md-8">
+          <div id="primary" class="content-area">
+            <main id="main" class="site-main" role="main">
+              {{ content }}
+            </main>
+          </div>
+        </div>
+        <div id="secondary" class="widget-area col-sm-12 col-md-4">
+          <div class="well">
+            <aside id="recent-posts-widget" class="widget">
+              <h3 class="widget-title">Recent Posts</h3>
+              <ul>
+                {% for post in site.posts limit:20 %}
+                <li>             
+                  <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+                  <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+                </li>
+                {% endfor %}
+              </ul>
+            </aside>
+
+            <aside id="tag-cloud-widget" class="widget">
+              <h3 class="widget-title">Tags</h3>
+              <div class="tagcloud">
+                {% assign sorted_tags = (site.tags | sort:0) %}
+                {% for tag in sorted_tags %}
+                  {% assign t = tag | first %}
+                  <a href="{{site.url}}/tags/{{ t | cgi_encode }}" title="Posts tagged {{ t }}" rel="tag">{{t}}</a>
+                {% endfor %}
+              </div>            
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    {% include analytics.html %}
+    <script src="{{ site.baseurl }}/highlight/highlight.pack.js"></script>
+    <script>hljs.configure({useBR:false});hljs.initHighlightingOnLoad();</script>
+    <script id="dsq-count-scr" src="//mikesir87blog.disqus.com/count.js" async></script> 
+  </body>
+</html>

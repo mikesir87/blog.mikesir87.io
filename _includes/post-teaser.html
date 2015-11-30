@@ -1,0 +1,27 @@
+    <article class="post">
+      <div class="blog-item-wrap">
+        <div class="post-inner-content">
+          <h1 class="entry-title"><a href="{{ site.baseurl }}{{ include.post.url }}">{{ include.post.title }}</a></h1>
+          <div class="entry-meta">
+            <span class="posted-on"><i class="fa fa-calendar"></i>&nbsp;{{ include.post.date | date: "%B %e, %Y" }}</span>
+            <span class="comments-link"><i class="fa fa-comment-o"></i>&nbsp;<a href="{{ site.baseurl}}{{ include.post.url }}#disqus_thread" data-disqus-identifier="{{ include.post.uuid }}">0 comments</a></span>
+            {% if post.categories != empty %}
+              <span class="cat-links">
+                <i class="fa fa-folder-open-o"></i>
+                {% for category in post.categories %}
+                  <a href="{{ site.url }}/category/{{ category | cgi_encode }}" title="Posts in category {{ category }}">{{ category }}</a>
+                {% endfor %}
+              </span>
+            {% endif %}
+          </div>
+
+          <div class="entry">
+            {{ include.post.excerpt }}
+          </div>
+
+          <div class="clearfix">
+            <a href="{{ site.baseurl }}{{ include.post.url }}" class="btn btn-default read-more">Read More</a>
+          </div>
+        </div>
+      </div>
+    </article>

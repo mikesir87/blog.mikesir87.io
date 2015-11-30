@@ -1,0 +1,23 @@
+---
+layout: default 
+title: Tags
+permalink: /tags/index.html
+description: "An archive of posts sorted by tag."
+---
+
+{% for tag in site.tags %}
+  <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
+  <hr />
+  {% assign pages_list = tag[1] %}  
+  {% for post in pages_list %}
+    {% if post.title != null %}
+    {% if group == null or group == post.group %}
+
+      {% include post-teaser.html post=post %}
+
+    {% endif %}
+    {% endif %}
+  {% endfor %}
+  {% assign pages_list = nil %}
+  {% assign group = nil %}
+{% endfor %}

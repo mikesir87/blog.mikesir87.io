@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<h1>Posts tagged with <em>{{ page.tag }}</em></h1>
+
+<ul>
+{% for post in site.tags[page.tag] %}
+  {% include post-teaser.html post=post %}
+{% endfor %}
+</ul>
