@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Marshalling Interfaces in JAX-RS 
-category: Development
+category: development
 tags: [java, javaee, jax-rs, jaxb]
 uuid: 55c4a1ec-049c-4e58-be82-d56594510735
 ---

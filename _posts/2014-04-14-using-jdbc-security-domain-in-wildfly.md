@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using JDBC Security Domain in Wildfly 
-category: Development
+category: development
 tags: [configuration, jdbc, security-domain, wildfly]
 uuid: 43043ef0-366e-47f4-80e1-7b810e086b64
 ---

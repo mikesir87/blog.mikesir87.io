@@ -16,7 +16,7 @@ layout: default
             <span class="cat-links">
               <i class="fa fa-folder-open-o"></i>
               {% for category in page.categories %}
-                <a href="{{ site.url }}/category/{{ category | cgi_encode }}" title="Posts in category {{ category }}">{{ category }}</a>
+                <a href="{{ site.url }}/category/{{ category | cgi_encode }}" title="Posts in category {{ category }}">{{ category | capitalize }}</a>
               {% endfor %}
             </span>
           {% endif %}

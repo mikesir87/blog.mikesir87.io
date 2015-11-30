@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using Weld (CDI), JSF, and JAX-RS in Tomcat 
-category: Development
+category: development
 tags: [cdi, ee7, javaee, jax-rs, jsf, tomcat, weld]
 uuid: 53a91e37-862e-43f1-8123-f715be288e7b
 ---
