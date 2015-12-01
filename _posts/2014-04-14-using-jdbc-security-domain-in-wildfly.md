@@ -8,6 +8,8 @@ uuid: 43043ef0-366e-47f4-80e1-7b810e086b64
 
 As I was going through this task, I ran into the whole “there’s so much documentation, but none of it is working or makes sense” problem that’s so common with the JBoss Application Server.  So, this post is designed to help out!
 
+<!--more-->
+
 ## Overview
 First of all, Wildfly calls this a Database Login Module.  There’s a few pieces we need to do to our app to use it:
 
