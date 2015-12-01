@@ -8,6 +8,8 @@ uuid: 0fdfb780-268e-4b5a-ab5b-901cb9458f3a
 
 One of the advantages of using Maven is the ability to share common resources across projects.  But, how do you do that with web resources, such as CSS, Javascript, and images?  Here’s how…
 
+<!--more-->
+
 First of all, doing this is actually a feature brought with Servlet 3.0.  In this example, I’m going to be using Servlet 3.0 with Tomcat 7.
 
 

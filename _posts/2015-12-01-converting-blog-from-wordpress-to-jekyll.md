@@ -10,6 +10,7 @@ excerpt_separator: <!--more-->
 
 I recently made the decision to cut over my blog from using Wordpress to Jekyll.  Might seem like an odd decision, but I'm loving it so far!  Here's why...
 
+<!--more-->
 
 ## Local Writing
 

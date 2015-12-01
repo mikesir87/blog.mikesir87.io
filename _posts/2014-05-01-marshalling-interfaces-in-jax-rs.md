@@ -21,7 +21,9 @@ In Java, interfaces are used all over the place.  Occasionally, these will need 
     at org.jboss.resteasy.core.interception.ServerWriterInterceptorContext.writeTo(ServerWriterInterceptorContext.java:62) [resteasy-jaxrs-3.0.6.Final.jar:]
         ...</code></pre>
 
-Ugly, huh?
+Ugly, huh? Here's how to fix it...
+
+<!--more-->
 
 ## The Easy Fix
 

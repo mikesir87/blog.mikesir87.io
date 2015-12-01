@@ -9,6 +9,8 @@ uuid: 13a0747d-4a63-4c60-b81a-d4bc54957e09
 
 Building off our AlarmManager, we want the ability to have the alarm appear, even if the device is locked. Here’s how.
 
+<!--more-->
+
 ## Permissions Required
 In order to wake up the device, you need to request the WAKE_LOCK permission. To do that, add this XML snippet into your AndroidManifest.xml.
 

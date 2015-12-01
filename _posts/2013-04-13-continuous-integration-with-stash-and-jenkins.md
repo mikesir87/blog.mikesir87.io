@@ -10,6 +10,8 @@ uuid: a555a99b-16ca-4566-8627-a175daa6bd65
 
 There are lots of posts about connecting Jenkins with GitHub, but not a lot about connecting Jenkins to Stash.  So, hopefully this helps!
 
+<!--more-->
+
 ## Triggering Jenkins from Stash
 Using Git’s post-receive hooks, it’s possible to trigger builds on Jenkins after a commit.  There is a little configuration required in both Jenkins and Stash.
 

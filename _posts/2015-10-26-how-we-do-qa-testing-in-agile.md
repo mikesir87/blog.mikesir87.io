@@ -9,6 +9,8 @@ uuid: 1cdf6ea1-fd32-4f08-ae0a-c7efa8d3945a
 
 There are many different ideas and approaches for doing QA testing, many of which depend on what project management style you’re using, the developers on the team, and if you have a QA/functional testing team. However, this is how I’ve found it to be successful, based on my observations working on the CREST team at Virginia Tech.
 
+<!--more-->
+
 First, a few assumptions on how we run things…
 
 1. We use Scrum, utilizing the JIRA Agile plugin for story creation and task decomposition

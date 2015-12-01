@@ -10,6 +10,8 @@ We’ve recently been in the transition from using Spring in a Tomcat environmen
 
 Since we’re in transition, we’d like to run the application in both Tomcat and Wildfly, without having to make changes to the bundled application.  It should just work on deploy.  Here’s how to do it…
 
+<!--more-->
+
 Add the Required Dependencies to Tomcat
 In your Tomcat’s lib folder, add the following jars:
 

@@ -8,6 +8,8 @@ uuid: a01c2c2c-43a0-43bb-8a62-7e3926f40b25
 
 At work, I’ve recently helped lead a migration to use a Docker-based approach for our QA testing. But first, if you haven’t read about we do our QA testing, you’ll probably want to [read that here](/2015/10/how-we-do-qa-testing-in-agile/).
 
+<!--more-->
+
 ## Why Docker?
 
 First of all, why Docker?  I’m sure you’ve read about Docker, but if you haven’t, spend two hours and go through their [Self-Paced Training course](https://training.docker.com/self-paced-training).  You’ll learn the fundamentals and be on you’re way.

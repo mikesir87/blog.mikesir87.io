@@ -8,6 +8,8 @@ uuid: 261ffb34-e639-47bd-94d6-bbd148415bf9
 
 There aren’t a lot of good write-ups on how to use the AlarmManager, so here is an example that launches an Activity using the AlarmManager.
 
+<!--more-->
+
 ## What’s the AlarmManager used for?
 
 The AlarmManager is used to schedule events or services at either a set time or a set interval. It’s Android’s “version” of the cron. In this case, we’re going to set an alarm for five seconds after the app is launched.

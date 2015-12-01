@@ -11,6 +11,8 @@ uuid: 30ddc942-e876-44fd-a070-7074bc9e2eec
 
 Adding images to GitHub is pretty straight forward if you can host the images somewhere or if you can put them into your main repository.  But, what if you want them ONLY in the wiki?  Here’s how to do it!
 
+<!--more-->
+
 1. Clone your wiki’s repository.  The wiki clone url can be obtained by clicking on the “Clone URL” button.
 
 <div class="text-center">

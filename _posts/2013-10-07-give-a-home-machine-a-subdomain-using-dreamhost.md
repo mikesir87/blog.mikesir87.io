@@ -8,6 +8,8 @@ uuid: 48597844-7502-4b5e-9319-6af85570411e
 
 Sometimes, it’s nice to give a home machine a subdomain for development purposes, or just for fun!  Here’s how to do it through Dreamhost.
 
+<!--more-->
+
 ## Pre-requisites
 
 1. You have a Dreamhost host account (if you want one, let me know!)
