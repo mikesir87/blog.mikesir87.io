@@ -26,8 +26,6 @@ url: http://blog.mikesir87.io
 
 baseurl: ""
 
-markdown: redcarpet
-highlighter: pygments
 permalink: /:year/:month/:title/
 excerpt_separator: <!--more-->
 
