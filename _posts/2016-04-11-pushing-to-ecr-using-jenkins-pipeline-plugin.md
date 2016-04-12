@@ -78,11 +78,11 @@ You should see a standard PHP Info screen at http://localhost:10080 (you may nee
 &nbsp;&nbsp;git 'ssh://git@github.com:irwin-tech/docker-pipeline-demo.git'
 &nbsp;
 &nbsp;&nbsp;stage 'Docker build'
-&nbsp;&nbsp;docker.build('php-hello-world')
+&nbsp;&nbsp;docker.build('demo')
 &nbsp;
 &nbsp;&nbsp;stage 'Docker push'
 &nbsp;&nbsp;docker.withRegistry('https://1234567890.dkr.ecr.us-east-1.amazonaws.com', 'ecr:demo-ecr-credentials') {
-&nbsp;&nbsp;&nbsp;&nbsp;docker.image('php-hello-world').push('latest')
+&nbsp;&nbsp;&nbsp;&nbsp;docker.image('demo').push('latest')
 &nbsp;&nbsp;}
 }</code></pre>
 
@@ -90,12 +90,12 @@ So, what's going on here?  Here's the line-by-line...
 
 - **stage 'Checkout'** - start a new stage for code checkout
 - **git 'ssh://git@github.com:irwin-tech/docker-pipeline-demo.git'** - checks out the code from the repository. With this command, if you enable **Poll SCM** in the job config, it will poll this repo.
-- **stage 'Docker build'** - sets up a new stage in the pipeline for the Docker image build
-- **docker.build('php-hello-world')** - performs a build using the local Dockerfile and tags the result as _php-hello-world_.
+- **stage 'Docker build'** - sets up a new stage in the pipeline for the Docker image build.
+- **docker.build('demo')** - performs a build using the local Dockerfile and tags the result as _demo_.  The important thing here is that the image name must match the name of the repository you created in ECR.
 - **docker.withRegistry**
   - the first argument here is the URL for your ECR domain. _Note that the repo has been stripped off from the end._
   - the second argument is a credential to use when connecting. The **ecr:** provider prefix hooks in the Amazon ECR plugin and converts the access id and secret in the credential to the equivalent of ```aws ecr get-login```.  This credential can then be used to push to the repository
-- **docker.image('php-hello-world').push('latest')** - grabs the _php-hello-world_ image, tags it as latest and pushes it to the registry
+- **docker.image('demo').push('latest')** - grabs the _demo_ image, tags it as latest and pushes it to the registry
 
 
 # Conclusion
