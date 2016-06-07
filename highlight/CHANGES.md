@@ -1,3 +1,185 @@
+## Version 9.4.0
+
+New languages:
+
+- *PureBASIC* by [Tristano Ajmone][]
+- *BNF* by [Oleg Efimov][]
+- *Ada* by [Lars Schulna][]
+
+New styles:
+
+- *PureBASIC* by [Tristano Ajmone][]
+
+Improvements to existing languages and styles:
+
+- We now highlight function declarations in Go.
+- [Taisuke Fujimoto][] contributed very convoluted rules for raw and
+  interpolated strings in C#.
+- [Boone Severson][] updated Verilog to comply with IEEE 1800-2012
+  SystemVerilog.
+- [Victor Zhou][] improved rules for comments and strings in PowerShell files.
+- [Janis Voigtländer][] updated the definition of Elm to version 0.17 of the
+  languages. Elm is now featured on the front page of <https://highlightjs.org>.
+- Special variable `$this` is highlighted as a keyword in PHP.
+- `usize` and `isize` are now highlighted in Rust.
+- Fixed labels and directives in x86 assembler.
+
+[Tristano Ajmone]: https://github.com/tajmone
+[Taisuke Fujimoto]: https://github.com/temp-impl
+[Oleg Efimov]: https://github.com/Sannis
+[Boone Severson]: https://github.com/BooneJS
+[Victor Zhou]: https://github.com/OiCMudkips
+[Lars Schulna]: https://github.com/captain-hanuta
+[Janis Voigtländer]: https://github.com/jvoigtlaender
+
+
+## Version 9.3.0
+
+New languages:
+
+- *Tagger Script* by [Philipp Wolfer][]
+- *MoonScript* by [Billy Quith][]
+
+New styles:
+
+- *xt256* by [Herbert Shin][]
+
+Improvements to existing languages and styles:
+
+- More robust handling of unquoted HTML tag attributes
+- Relevance tuning for QML which was unnecessary eager at seizing other
+  languages' code
+- Improve GAMS language parsing
+- Fixed a bunch of bugs around selectors in Less
+- Kotlin's got a new definition for annotations, updated keywords and other
+  minor improvements
+- Added `move` to Rust keywords
+- Markdown now recognizes \`\`\`-fenced code blocks
+- Improved detection of function declarations in C++ and C#
+
+[Philipp Wolfer]: https://github.com/phw
+[Billy Quith]: https://github.com/billyquith
+[Herbert Shin]: https://github.com/initbar
+
+
+## Version 9.2.0
+
+New languages:
+
+- *QML* by [John Foster][]
+- *HTMLBars* by [Michael Johnston][]
+- *CSP* by [Taras][]
+- *Maxima* by [Robert Dodier][]
+
+New styles:
+
+- *Gruvbox* by [Qeole][]
+- *Dracula* by [Denis Ciccale][]
+
+Improvements to existing languages and styles:
+
+- We now correctly handle JSX with arbitrary node tree depth.
+- Argument list for `(lambda)` in Scheme is no longer highlighted as a function
+  call.
+- Stylus syntax doesn't break on valid CSS.
+- More correct handling of comments and strings and other improvements for
+  VimScript.
+- More subtle work on the default style.
+- We now use anonymous modules for AMD.
+- `macro_rules!` is now recognized as a built-in in Rust.
+
+[John Foster]: https://github.com/jf990
+[Qeole]: https://github.com/Qeole
+[Denis Ciccale]: https://github.com/dciccale
+[Michael Johnston]: https://github.com/lastobelus
+[Taras]: https://github.com/oxdef
+[Robert Dodier]: https://github.com/robert-dodier
+
+
+## Version 9.1.0
+
+New languages:
+
+- *Stan* by [Brendan Rocks][]
+- *BASIC* by [Raphaël Assénat][]
+- *GAUSS* by [Matt Evans][]
+- *DTS* by [Martin Braun][]
+- *Arduino* by [Stefania Mellai][]
+
+New Styles:
+
+- *Arduino Light* by [Stefania Mellai][]
+
+Improvements to existing languages and styles:
+
+- Handle return type annotations in Python
+- Allow shebang headers in Javascript
+- Support strings in Rust meta
+- Recognize `struct` as a class-level definition in Rust
+- Recognize b-prefixed chars and strings in Rust
+- Better numbers handling in Verilog
+
+[Brendan Rocks]: http://brendanrocks.com
+[Raphaël Assénat]: https://github.com/raphnet
+[Matt Evans]: https://github.com/matthewevans
+[Martin Braun]: https://github.com/mbr0wn
+[Stefania Mellai]: https://github.com/smellai
+
+
+## Version 9.0.0
+
+The new major version brings a reworked styling system. Highlight.js now defines
+a limited set of highlightable classes giving a consistent result across all the
+styles and languages. You can read a more detailed explanation and background in
+the [tracking issue][#348] that started this long process back in May.
+
+This change is backwards incompatible for those who uses highlight.js with a
+custom stylesheet. The [new style guide][sg] explains how to write styles
+in this new world.
+
+Bundled themes have also suffered a significant amount of improvements and may
+look different in places, but all the things now consistent and make more sense.
+Among others, the Default style has got a refresh and will probably be tweaked
+some more in next releases. Please do give your feedback in our
+[issue tracker][issues].
+
+New languages in this release:
+
+- *Caché Object Script* by [Nikita Savchenko][]
+- *YAML* by [Stefan Wienert][]
+- *MIPS Assembler* by [Nebuleon Fumika][]
+- *HSP* by [prince][]
+
+Improvements to existing languages and styles:
+
+- ECMAScript 6 modules import now do not require closing semicolon.
+- ECMAScript 6 classes constructors now highlighted.
+- Template string support for Typescript, as for ECMAScript 6.
+- Scala case classes params highlight fixed.
+- Built-in names introduced in Julia v0.4 added by [Kenta Sato][].
+- Refreshed Default style.
+
+Other notable changes:
+
+- [Web workers support][webworkers] added bu [Jan Kühle][].
+- We now have tests for compressed browser builds as well.
+- The building tool chain has been switched to node.js 4.x. and is now
+  shamelessly uses ES6 features all over the place, courtesy of [Jeremy Hull][].
+- License added to non-compressed browser build.
+
+[Jan Kühle]: https://github.com/frigus02
+[Stefan Wienert]: https://github.com/zealot128
+[Kenta Sato]: https://github.com/bicycle1885
+[Nikita Savchenko]: https://github.com/ZitRos
+[webworkers]: https://github.com/isagalaev/highlight.js#web-workers
+[Jeremy Hull]: https://github.com/sourrust
+[#348]: https://github.com/isagalaev/highlight.js/issues/348
+[sg]: http://highlightjs.readthedocs.org/en/latest/style-guide.html
+[issues]: https://github.com/isagalaev/highlight.js/issues
+[Nebuleon Fumika]: https://github.com/Nebuleon
+[prince]: https://github.com/prince-0203
+
+
 ## Version 8.9.1
 
 Some last-minute changes reverted due to strange bug with minified browser build:
@@ -8,12 +190,16 @@ Some last-minute changes reverted due to strange bug with minified browser build
 - Template string support for Typescript, as for ECMAScript 6
 - License added to not minified browser build
 
+
 ## Version 8.9.0
 
 New languages:
 
 - *crmsh* by [Kristoffer Gronlund][]
-- *SQF* by [Søren Enevoldsen][]
+- *SQF* by [Soren Enevoldsen][]
+
+[Kristoffer Gronlund]: https://github.com/krig
+[Soren Enevoldsen]: https://github.com/senevoldsen90
 
 Notable fixes and improvements to existing languages:
 
@@ -22,14 +208,14 @@ Notable fixes and improvements to existing languages:
 - Crystal highlighting improved by [Tsuyusato Kitsune][]
 - Missing Swift keywords added by [Nate Cook][]
 - Improve detection of C block comments
-- Scala case classes params highlight fixed
-- ECMAScript 6 modules import now do not require closing semicolon
-- ECMAScript 6 classes constructors now highlighted
-- Template string support for Typescript, as for ECMAScript 6
+- ~~Scala case classes params highlight fixed~~
+- ~~ECMAScript 6 modules import now do not require closing semicolon~~
+- ~~ECMAScript 6 classes constructors now highlighted~~
+- ~~Template string support for Typescript, as for ECMAScript 6~~
 
 Other notable changes:
 
-- License added to not minified browser build
+- ~~License added to not minified browser build~~
 
 [Kristoffer Gronlund]: https://github.com/krig
 [Søren Enevoldsen]: https://github.com/senevoldsen90
@@ -37,6 +223,7 @@ Other notable changes:
 [Ladislav Prskavec]: https://github.com/abtris
 [Tsuyusato Kitsune]: https://github.com/MakeNowJust
 [Nate Cook]: https://github.com/natecook1000
+
 
 ## Version 8.8.0
 
@@ -66,6 +253,7 @@ Other notable changes:
 [Oleg Efimov]: https://github.com/Sannis
 [Tsuyusato Kitsune]: https://github.com/MakeNowJust
 
+
 ## Version 8.7
 
 New languages:
@@ -77,7 +265,7 @@ New languages:
 - *AutoIt* by Manh Tuan from [J2TeaM][]
 - *Toml* (ini extension) by [Guillaume Gomez][]
 
-New Styles:
+New styles:
 
 - *Hopscotch* by [Jan T. Sott][]
 - *Grayscale* by [MY Sun][]
@@ -107,6 +295,7 @@ Notable fixes and improvements to existing languages:
 [Dotan Dimet]: https://github.com/dotandimet
 [J2TeaM]: https://github.com/J2TeaM
 
+
 ## Version 8.6
 
 New languages:
@@ -119,7 +308,7 @@ New languages:
 - *armasm* by [Dan Panzarella][]
 - *TP* by [Jay Strybis][]
 
-New Styles:
+New styles:
 
 - *Atelier Cave*, *Atelier Estuary*,
   *Atelier Plateau* and *Atelier Savanna* by [Bram de Haan][]
@@ -145,6 +334,7 @@ Notable fixes and improvements to existing languages:
 [Bruno Dias]: https://github.com/sequitur
 [Jay Strybis]: https://github.com/unreal
 
+
 ## Version 8.5
 
 New languages:
@@ -156,7 +346,7 @@ New languages:
 - *Fortran* by [Anthony Scemama][] and [Thomas Applencourt][]
 - *Kotlin* by [Sergey Mashkov][]
 
-New Styles:
+New styles:
 
 - *Agate* by [Taufik Nurrohman][]
 - *Darkula* by [Jet Brains][]
@@ -185,6 +375,7 @@ Notable fixes and improvements to existing languages:
 [Gu Yiling]: https://github.com/Justineo
 [Sergey Mashkov]: https://github.com/cy6erGn0m
 [Thomas Applencourt]: https://github.com/TApplencourt
+
 
 ## Version 8.4
 
@@ -324,6 +515,7 @@ Other improvements:
 
 [Erik Osheim]: https://github.com/non
 [Lucas Mazza]: https://github.com/lucasmazza
+
 
 ## Version 8.1
 

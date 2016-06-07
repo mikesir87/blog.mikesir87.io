@@ -42,7 +42,7 @@ EC2 Container Registry.
 <pre class="no-wrap"><code class="php">&lt;?php phpinfo();</code></pre>
 
 3. In the project, create a **Dockerfile** with the following contents.
-<pre class="no-wrap"><code class="docker">FROM php:5.6-apache
+<pre class="no-wrap"><code class="dockerfile">FROM php:5.6-apache
 COPY index.php /var/www/html/</code></pre>
 
 4. Test it out!
