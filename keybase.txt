@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/mikesir87
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://blog.mikesir87.io
+  * I am mikesir87 (https://keybase.io/mikesir87) on keybase.
+  * I have a public key with fingerprint 59AD 7364 F6C9 3350 ECE7  BADF 8BE9 36DB 7A1F 879E
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101032d60c79642edec657859d820f4cd0e1b53849de041ced801fc5ed4ef65f7e40a",
+            "fingerprint": "59ad7364f6c93350ece7badf8be936db7a1f879e",
+            "host": "keybase.io",
+            "key_id": "8be936db7a1f879e",
+            "kid": "0101032d60c79642edec657859d820f4cd0e1b53849de041ced801fc5ed4ef65f7e40a",
+            "uid": "a57ebb517f0bf44634934f0204661f19",
+            "username": "mikesir87"
+        },
+        "service": {
+            "hostname": "blog.mikesir87.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1468270526,
+    "expire_in": 157680000,
+    "prev": "e54346e110ea91f9d060e3bd42305120d0f71cdddc4ddd000f27816ac81d9b52",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Comment: GPGTools - https://gpgtools.org
+
+owGtkm1IFEEYx++yFzvpvTg4eqEtxDqxmd3Zt6M3K5DMkkILijp3d2av9bzbu93N
+lDIIgooMLKJAisAo1EoCQywS0sIvvUPIZVlWxBUViEKBlTVr1qc+NgMzzDO//3+e
+52HqpmR4fN4bHfNX5nQsne2990H1bDs0qXMfo5q4mgntY6JkdCMVmNhOOGpgJsQA
+SCfHYgFooiwglmCiCbwo8TKWWKAjDQMCVZ6TkIwJQFAjWAJQ13iCEdEFXhcJAgqT
+y+hGPEKshGXEHWrLywoWOQHpgiZzHA+IRkRVwbqkEpkTsCoqUJdEmVDhbtN2FTQ5
+VbFJnmHSGD2ER9P7B/+f894zaqfwIlFVHoo6UHWEBA7JHNIBC5AgQB3KLmgTK67E
+CKVjRpTYhiWJTE0uQ8OVhkbczrqljCFqhRnJ+8v9riphmY6pmRX0erfjJOyQK3eq
+Ey6/l6jhMaewasQx7SZVVBLLNsw4E4KU1BzDtYZIkFgR8KyQy5CqhGGRsOESvChI
+gA73HVJJLckuHnFIIBACoshQlzEQAOFUjFgO8JAFGOgi1DDGGqILleqsKEFB0SSI
+ZZVnGbe4ZNxkQjzNU4lQT9uIxBVnj0WYGt9R79zxHq/PM3HCOPefeXyTp//5fHmH
+J/0IdHX1N6Z9j/OXP11SXV9QOj2ZeWXjukTJtOa2HX1FRYGh1nR/umFacIt/WxC2
+bB1e+C27oW9RquxNWeHPe9Hyovrg4hdrS99lp6o+9dw8mZkWv3ve5W/+fGxBRiwa
+u3m6PzBPbtm/qThePst/cGRF9+Gh01Zv7Yh1YNnFzY+ebLAiM1Nferq3N31Cywtr
+uPsP/QMr12un6tdX5c+x84dLiq82tyUfnQz0bloVaXofLQg2HW+su32rc+argmtZ
+5V2v3pYeWXU3BwxmrPm4886JnV/9/uup1w3dwRMd684OPJ/qaX+Qdbn27MtLsLOu
+BGaeGyw836qvhmdg+7OjyTV39l6YcfkX
+=9qlQ
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mikesir87
+
+==================================================================
+
