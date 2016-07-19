@@ -8,6 +8,8 @@
     };
 
     (function() { 
+      if (window.location.host.indexOf('localhost') == 0)
+        return;
       var d = document, s = d.createElement('script');
         
       s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
