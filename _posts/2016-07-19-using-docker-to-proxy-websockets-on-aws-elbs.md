@@ -14,6 +14,8 @@ In this post, we'll start at the very beginning.  We'll spin up an ELB, configur
 
 <!--more-->
 
+<div class="alert alert-warning"><strong>UPDATE (8/18/2016)</strong> - If you're still trying to proxy WebSockets with ELBs, you should really look at the newly announced Application Load Balancers. They proxy WebSockets by default and have a lot more flexibility with their routing.</div>
+
 ## What we're building
 
 At the end of this post, we're going to setup an ELB to proxy all TCP traffic to Nginx, using the Proxy Protocol.  Nginx will then read the Proxy Protocol and set the headers needed for the final application.  At the end of the day, it'll look like this:
