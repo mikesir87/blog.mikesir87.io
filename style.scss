@@ -10,3 +10,34 @@ pre.no-wrap code {
   word-wrap: normal;
   white-space: pre;
 }
+
+pre {
+  position: relative;
+  margin-left: -50px;
+  margin-right: -50px;
+  border: 0px;
+  background-color: #282b2e;
+  padding: 15px 20px;
+  border-radius: 0px;
+}
+
+pre[class*=language-] {
+  padding-top: 45px;
+}
+
+pre[class*=language-]:before {
+    content: attr(data-title);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 5px 15px;
+    text-align: right;
+    font-family: arial;
+    text-shadow: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: #114663;
+    color: #fff;
+}

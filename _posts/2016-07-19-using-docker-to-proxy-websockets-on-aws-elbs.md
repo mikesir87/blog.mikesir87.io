@@ -75,7 +75,7 @@ Creating an ELB is pretty straight forward. But, in case you forgot, here's the 
 
 Since Nginx will be listening on ports 81 and 444, we need to configure the ELB to use Proxy Protocol on those two ports.  There's no way to do that in the AWS CLI.  So, here's the commands...
 
-<pre class="no-wrap"><code class="bash">aws elb create-load-balancer-policy --load-balancer-name ws-proxy-test --policy-name proxyProtocol-policy --policy-type-name ProxyProtocolPolicyType --policy-attributes AttributeName=ProxyProtocol,AttributeValue=true
+<pre class="no-wrap language-bash" data-title="bash"><code class="bash">aws elb create-load-balancer-policy --load-balancer-name ws-proxy-test --policy-name proxyProtocol-policy --policy-type-name ProxyProtocolPolicyType --policy-attributes AttributeName=ProxyProtocol,AttributeValue=true
 aws elb set-load-balancer-policies-for-backend-server --load-balancer-name ws-proxy-test --instance-port 81 --policy-names proxyProtocol-policy 
 aws elb set-load-balancer-policies-for-backend-server --load-balancer-name ws-proxy-test --instance-port 444 --policy-names proxyProtocol-policy
 </code></pre>
@@ -89,7 +89,7 @@ If you named the ELB differently, change the load-balancer-name values appropria
 
 The easiest thing to do here is to utilize Docker.  I have a [GitHub project](https://github.com/mikesir87/docker-nginx-elb-websocket) that publishes a [Docker image](https://hub.docker.com/r/mikesir87/docker-nginx-elb-websocket) to make this super easy.  And the easiest way to piece it all together is to make a Docker Compose file.
 
-<pre class="no-wrap"><code class="yaml">nginx_proxy:
+<pre class="no-wrap language-yaml" data-title="yaml"><code class="yaml">nginx_proxy:
   image: mikesir87/docker-nginx-elb-websocket
   environment:
     LISTEN_ON: 81
