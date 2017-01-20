@@ -45,13 +45,15 @@
 
     <div class="container main-content-area">
       <div class="row">
-        <div class="main-content-inner col-sm-12 col-md-8">
+        <div class="main-content-inner col-sm-12 {% if layout.hide_sidebar %} col-md-10 col-md-offset-1 {% else %}col-md-8{% endif %}">
           <div id="primary" class="content-area">
             <main id="main" class="site-main" role="main">
               {{ content }}
             </main>
           </div>
         </div>
+
+        {% if layout.hide_sidebar %}{% else %}
         <div id="secondary" class="widget-area col-sm-12 col-md-4">
           <div class="well">
             <aside id="recent-posts-widget" class="widget">
@@ -78,6 +80,7 @@
             </aside>
           </div>
         </div>
+        {% endif %}
       </div>
     </div>
 
