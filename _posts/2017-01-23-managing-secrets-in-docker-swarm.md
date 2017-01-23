@@ -18,7 +18,7 @@ So... I'm assuming you read the warning above and have a Swarm cluster configure
 
 ## What we're going to do...
 
-We're going to use a simple Node.JS app that simply displays the contents of a secret, which we'll name `db-password`.  When Docker makes secrets available, it mounts the secrets as files within the `/run/secrets` directory.  So, once configured, we will have a `/run/secrets/db-password` file in which the contents are our secret.  The app wil simply display the contents or an error.
+We're going to use a simple Node.JS app that simply displays the contents of a secret, which we'll name `db-password`.  When Docker makes secrets available, it mounts the secrets as files within the `/run/secrets` directory.  So, once configured, we will have a `/run/secrets/db-password` file in which the contents are our secret.  The app will simply display the contents or an error.
 
 The app, `mikesir87/docker-secret-example-app`, can be found here - [Docker Hub](https://hub.docker.com/r/mikesir87/docker-secret-example-app) or [Source Code](https://github.com/mikesir87/docker-secret-example-app)
 
