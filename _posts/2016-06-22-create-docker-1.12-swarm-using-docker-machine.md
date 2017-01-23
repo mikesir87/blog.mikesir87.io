@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create a Docker 1.12 Swarm using docker-machine
+title: Create a Docker 1.12+ Swarm using docker-machine
 category: development
 tags: [docker, swarm, docker-machine]
 uuid: ce1f1fe5-c153-4664-93da-6074bf2977fa
@@ -18,7 +18,7 @@ In case you're a little confused on how to spin up a mini-cluster, this post wil
 
 <!--more-->
 
-<div class="alert alert-warning"><i class="fa fa-exclamation-triangle"></i>&nbsp;In order to follow along, you'll need Docker 1.12, which is still in RC at the time of this post being published.</div>
+<div class="alert alert-warning"><i class="fa fa-exclamation-triangle"></i>&nbsp;This post was updated on 2017-01-23 to reflect updates in Docker 1.12 and 1.13, as it was originally written targeting the Docker 1.12 RC.</div>
 
 
 ## Setup the VMs
@@ -65,30 +65,39 @@ To setup the Swarm  cluster, we only need to run a few commands. Here we go...
 ### Setting up the Manager
 
 <pre class="no-wrap language-bash" data-title="shell"><code class="bash">docker-machine ssh node-0
-docker swarm init --listen-addr=192.168.99.100:2733</code></pre>
+docker swarm init --listen-addr=192.168.99.100:2733 --advertise-addr=192.168.99.100:2733</code></pre>
+
+<div class="alert alert-warning"><strong>NOTE:</strong> It is possible you will need to add <strong><code>--advertise-addr=192.168.99.100:2733</code></strong></div>
 
 Replace the listen-addr IP address for node-0's IP and boom!  **That's it!**  You should see output like this (with a different node id)...
 
-<pre class="no-wrap"><code class="bash">Swarm initialized: current node (ecxc2ie73p9i4yubwcgdkuxgy) is now a manager.</code></pre>
+<pre class="no-wrap"><code class="bash">Swarm initialized: current node (ecxc2ie73p9i4yubwcgdkuxgy) is now a manager.
 
+To add a worker to this swarm, run the following command:
+
+  docker swarm join \
+  --token SWMTKN-1-some-random-token-string \
+  192.168.99.100:2733
+  
+To add a manger to this swarm, run 'docker swarm join-token manager' and follow the instructions.</code></pre>
+
+**Copy the command**, as we'll use it to allow our workers to join the swarm.
 
 ### Setting up the Workers
 
 In a new terminal tab, run the following to setup node-1 as a worker:
 
 <pre class="no-wrap language-bash" data-title="shell"><code class="bash">docker-machine ssh node-1
-docker swarm join --listen-addr=192.168.99.101:2733 192.168.99.100:2733</code></pre>
+[Paste the earlier command from the swarm init]</code></pre>
 
 If it worked right, you should then see the following:
 
-<pre class="no-wrap language-bash" data-title="shell"><code class="bash">This node joined a Swarm as a worker.</code></pre>
-
-For me, I _had_ to provide the specific ```listen-addr``` (which is the IP address for that node), as otherwise it would hang trying to setup the connection.  But, still not bad!
+<pre class="no-wrap language-bash" data-title="shell"><code class="bash">This node joined a swarm as a worker.</code></pre>
 
 Now do the same for node-2 and you're all done!
 
 <pre class="no-wrap language-bash" data-title="shell"><code class="bash">docker-machine ssh node-2
-docker swarm join --listen-addr=192.168.99.102:2733 192.168.99.100:2733</code></pre>
+[Paste the ealier command from the swarm init]</code></pre>
 
 
 To see the nodes in your cluster, try this from the manager node (node-0):
