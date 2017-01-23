@@ -43,7 +43,7 @@ This creates a new secret named `db-password`, using the contents of the file `p
 
 ### Using standard in
 
-You can also create services using standard in.  This could let you curl, decrypt, or whatever...
+You can also create secrets using standard in, allowing you to use curl, decryption, or whatever...
 
 <pre class="no-wrap language-bash" data-title="shell"><code class="bash">&gt; curl https://raw.githubusercontent.com/mikesir87/docker-secret-example-app/master/password.txt | docker secret create db-password -
 vwyegj0kaftyzu8a5lo8c6lbs</code></pre>
