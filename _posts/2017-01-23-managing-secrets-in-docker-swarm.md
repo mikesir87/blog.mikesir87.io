@@ -7,7 +7,7 @@ uuid: 95f41ece-d7ad-4c7d-a11f-a3df49300445
 ---
 
 
-Docker 1.13 was released just a few days ([blog post here](https://blog.docker.com/2017/01/whats-new-in-docker-1-13/)). With it came several improvements to Docker Swarm. One highly anticipated improvement (at least by me anyways) is secrets management.  In this post, we'll see how to add secrets to a swarm and how to make them available to running services.
+Docker 1.13 was released just a few days ago ([blog post here](https://blog.docker.com/2017/01/whats-new-in-docker-1-13/)). With it came several improvements to Docker Swarm. One highly anticipated improvement (at least by me anyways) is secrets management.  In this post, we'll see how to add secrets to a swarm and how to make them available to running services.
 
 <!--more-->
 
