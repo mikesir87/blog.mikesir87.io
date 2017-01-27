@@ -34,7 +34,7 @@ The new `docker secret` command allows us to specify new secrets that can be sha
 
 Let's assume that we have a file named `password.txt` that contains our database password of _this-is-my-super-secret-password_.  To add this secret, run the following command...
 
-<pre class="no-wrap language-bash" data-title="shell"><code class="bash">&gt; docker service create db-password password.txt
+<pre class="no-wrap language-bash" data-title="shell"><code class="bash">&gt; docker secret create db-password password.txt
 uxqpdez2tgky49ixllk4yls8l</code></pre>
 
 This creates a new secret named `db-password`, using the contents of the file `password.txt`
