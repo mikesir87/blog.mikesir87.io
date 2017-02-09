@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using Docker for QA Testing
-category: development
+category: Blog Post
 tags: [docker, jenkins]
 uuid: a01c2c2c-43a0-43bb-8a62-7e3926f40b25
 ---

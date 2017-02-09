@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Converting my blog from Wordpress to Jekyll 
-category: development
+category: Blog Post
 tags: [jekyll]
 uuid: 5b9b3350-0c97-4aa0-8f54-ff9461271395
 excerpt_separator: <!--more-->

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lessons after using Docker for a Month 
-category: development
+category: Blog Post
 tags: [docker]
 uuid: d4253eae-466d-4686-a798-04d085dac1ac
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using Arquillian Drone and Graphene in Standalone Mode
-category: development
+category: Blog Post
 tags: [arquillian, drone, graphene]
 uuid: c246c7bb-e329-4392-aacd-b337ac450549
 ---

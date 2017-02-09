@@ -33,7 +33,7 @@
               </button>
               
               <div id="logo">
-                <span class="site-name"><a class="navbar-brand" href="/" title="mikesir87's musings" rel="home">mikesir87's musings</a></span>
+                <span class="site-name"><a class="navbar-brand" href="/" title="mikesir87's musings" rel="home">{{ site.name }}</a></span>
               </div><!-- end of #logo -->
               
             </div>
@@ -45,42 +45,13 @@
 
     <div class="container main-content-area">
       <div class="row">
-        <div class="main-content-inner col-sm-12 {% if layout.hide_sidebar %} col-md-10 col-md-offset-1 {% else %}col-md-8{% endif %}">
+        <div class="main-content-inner col-sm-12 col-lg-10 col-lg-offset-1">
           <div id="primary" class="content-area">
             <main id="main" class="site-main" role="main">
               {{ content }}
             </main>
           </div>
         </div>
-
-        {% if layout.hide_sidebar %}{% else %}
-        <div id="secondary" class="widget-area col-sm-12 col-md-4">
-          <div class="well">
-            <aside id="recent-posts-widget" class="widget">
-              <h3 class="widget-title">Recent Posts</h3>
-              <ul>
-                {% for post in site.posts limit:5 %}
-                <li>             
-                  <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-                  <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
-                </li>
-                {% endfor %}
-              </ul>
-            </aside>
-
-            <aside id="tag-cloud-widget" class="widget">
-              <h3 class="widget-title">Tags</h3>
-              <div class="tagcloud">
-                {% assign sorted_tags = (site.tags | sort:0) %}
-                {% for tag in sorted_tags %}
-                  {% assign t = tag | first %}
-                  <a href="{{site.url}}/tags/{{ t | cgi_encode }}" title="Posts tagged {{ t }}" rel="tag">{{t}}</a>
-                {% endfor %}
-              </div>            
-            </aside>
-          </div>
-        </div>
-        {% endif %}
       </div>
     </div>
 

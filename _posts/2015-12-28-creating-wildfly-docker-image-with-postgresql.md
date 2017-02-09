@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Creating a Wildfly Docker image with PostgreSQL
-category: development
+category: Blog Post
 tags: [docker, wildfly]
 uuid: c34fb3b8-803c-4004-a8de-16bd32734e41
 ---

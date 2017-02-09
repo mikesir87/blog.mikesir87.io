@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Android – Creating an Alarm with AlarmManager
-category: development
+category: Blog Post
 tags: [alarm-manager, android, wakelock]
 uuid: 261ffb34-e639-47bd-94d6-bbd148415bf9
 ---

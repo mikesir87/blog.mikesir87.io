@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Continuous Integration with Stash and Jenkins 
-category: development
+category: Blog Post
 tags: [continuous integration, integration, jenkins, stash]
 uuid: a555a99b-16ca-4566-8627-a175daa6bd65
 ---

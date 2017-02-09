@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pushing to ECR Using Jenkins Pipeline Plugin
-category: development
+category: Blog Post
 tags: [docker, jenkins, ecr, aws]
 uuid: cdd04a27-0c24-442a-8f45-8b5dd9f1acab
 ---

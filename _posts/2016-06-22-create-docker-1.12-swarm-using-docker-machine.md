@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create a Docker 1.12+ Swarm using docker-machine
-category: development
+category: Blog Post
 tags: [docker, swarm, docker-machine]
 uuid: ce1f1fe5-c153-4664-93da-6074bf2977fa
 ---

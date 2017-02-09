@@ -48,3 +48,20 @@ pre[class*=language-]:before {
     background: #114663;
     color: #fff;
 }
+
+.blog-list-entry {
+  padding: 10px 0px;
+  border-bottom: 1px solid #ccc;
+
+  a {
+    display: block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &:last-child {
+    border-bottom: 0px;
+  }
+}

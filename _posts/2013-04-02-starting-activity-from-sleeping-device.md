@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Starting Activity from Sleeping Device 
-category: development
+category: Blog Post
 tags: [alarm-manager, android, wakelock]
 uuid: 13a0747d-4a63-4c60-b81a-d4bc54957e09
 ---

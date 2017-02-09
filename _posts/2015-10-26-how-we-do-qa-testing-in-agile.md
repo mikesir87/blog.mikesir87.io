@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How we do QA Testing in Agile 
-category: development
+category: Blog Post
 tags: [agile, bacabs, scrum]
 uuid: 1cdf6ea1-fd32-4f08-ae0a-c7efa8d3945a
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Writing Functional Tests with Drone and Graphene that Don't Suck
-category: development
+category: Blog Post
 tags: [arquillian, drone, graphene]
 uuid: b8d5cae1-eb78-40c9-8788-5f489cca056a
 ---

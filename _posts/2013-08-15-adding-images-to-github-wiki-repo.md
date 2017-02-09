@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adding Images to GitHub Wiki Repo 
-category: development
+category: Blog Post
 tags: [github, images, wiki]
 uuid: 30ddc942-e876-44fd-a070-7074bc9e2eec
 ---

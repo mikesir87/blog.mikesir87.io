@@ -1,9 +1,22 @@
 ---
+hide_sidebar: true
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    {% include post-teaser.html post=post %}
-  {% endfor %}
-</div>
+<section class="post">
+  <div class="post-inner-content">
+    {% for post in site.posts %}
+      <div class="row blog-list-entry">
+        <div class="col-xs-12 col-md-8">
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </div>
+        <div class="col-xs-6 col-md-2">
+          {{ post.date | date: "%b %e, %Y" }}
+        </div>
+        <div class="col-xs-6 col-md-2">
+          {{ post.category }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

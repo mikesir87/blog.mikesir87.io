@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sharing Web Resources using Maven 
-category: development
+category: Blog Post
 tags: [java, maven, servlet 3.0, web resources]
 uuid: 0fdfb780-268e-4b5a-ab5b-901cb9458f3a
 ---

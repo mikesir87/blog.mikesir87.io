@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Give a home machine a subdomain using Dreamhost
-category: development
+category: Blog Post
 tags: [dns, dreamhost]
 uuid: 48597844-7502-4b5e-9319-6af85570411e
 ---

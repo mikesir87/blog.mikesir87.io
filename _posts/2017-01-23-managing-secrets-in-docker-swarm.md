@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Managing Secrets in Docker Swarm
-category: development
+category: Blog Post
 tags: [docker, secrets, swarm]
 uuid: 95f41ece-d7ad-4c7d-a11f-a3df49300445
 ---

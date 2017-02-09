@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using Docker to Proxy WebSockets on AWS ELBs
-category: development
+category: Blog Post
 tags: [aws, docker, elb, websocket]
 uuid: a7c6d51b-fc3a-4030-b03a-abc395c1ad07
 ---
