@@ -81,7 +81,7 @@ You should see a standard PHP Info screen at http://localhost:10080 (you may nee
 &nbsp;&nbsp;docker.build('demo')
 &nbsp;
 &nbsp;&nbsp;stage 'Docker push'
-&nbsp;&nbsp;docker.withRegistry('https://1234567890.dkr.ecr.us-east-1.amazonaws.com', 'ecr:demo-ecr-credentials') {
+&nbsp;&nbsp;docker.withRegistry('https://1234567890.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:demo-ecr-credentials') {
 &nbsp;&nbsp;&nbsp;&nbsp;docker.image('demo').push('latest')
 &nbsp;&nbsp;}
 }</code></pre>
