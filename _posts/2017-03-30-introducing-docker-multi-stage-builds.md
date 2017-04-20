@@ -9,7 +9,9 @@ uuid: fba30f67-885c-4c36-be97-326f32bb278c
 
 Docker has recently merged in support to perform "multi-stage builds."  In other words, it allows you to orchestrate a pipeline of builds within a single Dockerfile.
 
-<div class="alert alert-warning"><strong>NOTE:</strong> The support has not yet been released into the stable CE build of Docker. However, you can pull the <strong>17.05.0-dev</strong> build or use <a href="http://play-with-docker.com">play-with-docker.com</a> to start playing with it now</div>
+<div class="alert alert-warning"><strong>NOTE:</strong> The support for multi-stage builds is available starting with Docker 17.05.  You can also use <a href="http://play-with-docker.com">play-with-docker.com</a> to start playing with it now.</div>
+
+<div class="alert alert-info"><strong>Update 4/20</strong> - Added section about named stages</div>
 
 
 
@@ -155,6 +157,18 @@ git clone https://github.com/mikesir87/docker-multi-stage-demo.git && cd docker-
 docker build -t nginx-with-cert .
 docker run -d -p 443:443 nginx-with-cert
 ```
+
+## Using Named Stages
+
+You either reference stages by using offsets (like `--from=0`) or by using names.  To name a stage use the syntax `FROM [image] as [name]`.  Here's an example...
+
+<pre class="no-wrap language-dockerfile" data-title="dockerfile"><code class="dockerfile">FROM alpine:3.4 as cert-build
+...
+
+FROM nginx
+COPY --from=cert-build
+</code></pre>
+
 
 
 ## Conclusion
