@@ -6,6 +6,7 @@ tags: [docker]
 uuid: deffb000-23ef-48fd-8680-559a85d1597b
 ---
 
+<div class="alert alert-info">This post is not intended to slam any single individual, entity, or organization. It's merely an observation/rant/informational post. I, too, have fallen victim to this idea in the past.</div>
 
 The other day, I was reading through Hacker News and saw a comment that said...
 
