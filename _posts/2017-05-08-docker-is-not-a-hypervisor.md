@@ -4,6 +4,8 @@ title: Docker is NOT a Hypervisor
 category: Blog Post
 tags: [docker]
 uuid: deffb000-23ef-48fd-8680-559a85d1597b
+description: Docker is often portrayed as a "hypervisor", but it's not. Here's a quick reminder...
+image: /images/containers-vs-vms-old.jpg
 ---
 
 <div class="alert alert-info">This post is not intended to slam any single individual, entity, or organization. It's merely an observation/rant/informational post. I, too, have fallen victim to this idea in the past.</div>
