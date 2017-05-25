@@ -86,7 +86,7 @@ services:
   secret-simulator:
     image: mikesir87/secrets-simulator
     volumes:
-      secrets:/run/secrets:rw
+      - secrets:/run/secrets:rw
     environment:
       DB_USERNAME: admin
       DB_PASSWORD: password1234!
