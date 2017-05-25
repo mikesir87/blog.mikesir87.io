@@ -4,7 +4,7 @@ title: Using Docker Secrets during Development
 category: Blog Post
 tags: [docker]
 uuid: bd0e032a-0a22-4f9a-b39e-716031a28efd
-description: Docker Secrets are amazing! Using them in development can be tricky though. Here are three methods to help out.
+description: Docker Secrets are amazing! Using them in development can be tricky though. Here are four methods to help out.
 image: /images/securing-containers.png
 ---
 
@@ -16,7 +16,7 @@ image: /images/securing-containers.png
   <iframe width="560" height="315" src="https://www.youtube.com/embed/iHQCVFMBdCA" frameborder="0" allowfullscreen></iframe>
 </div>
 
-Now that you've watched that, you know how great secrets are and why you should be using them!  They're awesome! But... **how do we get used to using them during development**?  Here are three ways (according to me anyways) on how to use secrets during development:
+Now that you've watched that, you know how great secrets are and why you should be using them!  They're awesome! But... **how do we get used to using them during development**?  Here are four ways (according to me anyways) on how to use secrets during development:
 
 1. Run a Swarm
 2. Use secrets in Docker Compose
