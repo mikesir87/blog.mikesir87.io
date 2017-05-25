@@ -25,6 +25,10 @@ Now that you've watched that, you know how great secrets are and why you should 
 
 There are definitely pros and cons to each method, so let's dive in and look at each method!
 
+<div class="alert alert-info">
+  Note that the methods below are intended for DEV environments, not production. When using non-swarm methods, secrets aren't very secretive. Friends don't let friends use real credentials locally! :)
+</div>
+
 
 ## Method One: Run a Swarm
 
