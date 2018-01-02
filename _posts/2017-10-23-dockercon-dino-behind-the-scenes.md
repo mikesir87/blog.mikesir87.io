@@ -5,6 +5,7 @@ category: Blog Post
 tags: [docker]
 uuid: 6acb5a02-ec91-45e5-85b3-2fb7897f2628
 description: Go behind the scenes to find out the story of the dinos at DockerCon EU!
+excerpt: Go behind the scenes to find out the story of the dinos at DockerCon EU!
 image: /images/dockerconEU-dinos.jpg
 ---
 

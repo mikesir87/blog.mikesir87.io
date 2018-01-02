@@ -4,6 +4,8 @@ title: Container Day Presentations
 category: Talk
 tags: [docker, talk]
 uuid: 6de1cf34-c7f0-47cb-8aca-c8c69a8071c8
+description: Presentation slides for the inaugural NRV ContainerDay event
+excerpt: Presentation slides for the inaugural NRV ContainerDay event
 ---
 
 I had the incredible opportunity to organize and run the inaugural NRV ContainerDay event on September 2, 2017. It was a blast and gave me a much greater appreciation for those that organize large events.  Below are two of my presentations.  Open the speaker notes for what each demo covered.

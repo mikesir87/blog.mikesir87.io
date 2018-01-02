@@ -5,6 +5,7 @@ category: Blog Post
 tags: [docker]
 uuid: deffb000-23ef-48fd-8680-559a85d1597b
 description: Docker is often portrayed as a hypervisor, but it's not. Here's a quick reminder...
+excerpt: Docker is often portrayed as a hypervisor, but it's not. Here's a quick reminder...
 image: /images/containers-vs-vms-old.jpg
 ---
 

@@ -4,6 +4,8 @@ title: What's New in Docker 1.13?
 category: Meetup Slides
 tags: [docker, meetup]
 uuid: 0d9b3235-673a-47e3-8416-92f033952f89
+description: Presentation slides for the Docker Blacksburg Meetup on Feb. 8, 2017
+excerpt: Presentation slides for the Docker Blacksburg Meetup on Feb. 8, 2017
 ---
 
 Presentation give to Docker Blacksburg Meetup on Feb. 8, 2017.

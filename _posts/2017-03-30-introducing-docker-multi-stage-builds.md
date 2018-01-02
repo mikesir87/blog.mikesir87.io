@@ -4,6 +4,8 @@ title: Introducing Docker Multi-Stage Builds
 category: Blog Post
 tags: [docker]
 uuid: fba30f67-885c-4c36-be97-326f32bb278c
+description: Docker has recently merged in support to perform "multi-stage builds."  In other words, it allows you to orchestrate a pipeline of builds within a single Dockerfile. Here's a quick rundown...
+excerpt: Docker has recently merged in support to perform "multi-stage builds."  In other words, it allows you to orchestrate a pipeline of builds within a single Dockerfile. Here's a quick rundown...
 ---
 
 

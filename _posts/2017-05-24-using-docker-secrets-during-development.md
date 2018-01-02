@@ -5,6 +5,7 @@ category: Blog Post
 tags: [docker]
 uuid: bd0e032a-0a22-4f9a-b39e-716031a28efd
 description: Docker Secrets are amazing! Using them in development can be tricky though. Here are four methods to help out.
+excerpt: Docker Secrets are amazing! Using them in development can be tricky though. Here are four methods to help out.
 image: /images/securing-containers.png
 ---
 

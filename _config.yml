@@ -41,4 +41,5 @@ exclude:
     - LICENSE
     - README.md
     - CNAME
-
+feed:
+  path: atom.xml

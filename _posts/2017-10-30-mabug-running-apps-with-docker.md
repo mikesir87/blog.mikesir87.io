@@ -4,6 +4,7 @@ title: MABUG - Running Apps with Docker
 category: Talk
 tags: [docker, talk]
 description: Presentation slides from talk given at the Mid-Atlantic Banner User Group. Take a look!
+excerpt: Presentation slides from talk given at the Mid-Atlantic Banner User Group. Take a look!
 image: /images/2017-10-30-mabug.jpg
 uuid: a3b4afe5-9ec7-4c91-b725-f5ae4566146e
 ---

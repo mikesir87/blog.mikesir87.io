@@ -5,6 +5,7 @@ category: Blog Post
 tags: [docker]
 uuid: a2338294-ba6b-4ed6-a575-eafa00a01148
 description: You build an image. Great! It runs. But, not everything is there. Why not? Could it be a bad RUN command?
+excerpt: You build an image. Great! It runs. But, not everything is there. Why not? Could it be a bad RUN command?
 image: /images/securing-containers.png
 ---
 
