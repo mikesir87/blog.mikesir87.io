@@ -120,8 +120,8 @@ To try it out, we'll sping up a quick Swarm cluster using [Play with Docker](htt
 ```bash
 git clone https://github.com/mikesir87/traefik-socat-demo.git
 cd traefik-socat-demo
-docker network create --attachable --driver overlay app-entry
-docker network create --attachable --driver overlay mgmt
+docker network create --attachable --driver overlay --opt encrypted=true app-entry
+docker network create --attachable --driver overlay --opt encrypted=true mgmt
 docker stack deploy -c proxy-stack.yml proxy
 docker stack deploy -c app-stack.yml cats
 ```
