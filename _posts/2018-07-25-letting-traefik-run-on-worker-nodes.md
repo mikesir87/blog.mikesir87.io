@@ -5,7 +5,7 @@ category: Blog Post
 tags: [docker]
 description: If you're using Traefik in Swarm mode, it needs to listen to Docker events. Here's how to do it without having all of your traffic go through manager nodes.
 excerpt: If you're using Traefik in Swarm mode, it needs to listen to Docker events. Here's how to do it without having all of your traffic go through manager nodes.
-image: /images/dry-code-dont-repeat-yourself.jpg
+image: /images/traefik-logo.svg
 uuid: 97238912-f7f9-4c30-9c2b-8ed257a8205e
 ---
 
