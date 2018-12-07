@@ -1,0 +1,26 @@
+---
+layout: null
+---
+{% assign posts = site.posts | where:'category', 'Blog Post' %}
+{% assign talks = site.posts | where:'category', 'Talk' %}
+{
+    "posts": [
+        {% for post in posts %}
+        {
+            "title": {{ post.title | jsonify }},
+            "date": {{ post.date | date: "%s" }},
+            "href": {{ post.url | absolute_url | jsonify }}
+        }{% if forloop.last == false %}, {% endif %}
+        {% endfor %}
+    ],
+    "talks": [
+        {% for talk in talks %}
+        {
+            "title": {{ talk.title | jsonify }},
+            "date": {{ talk.date | date: "%s" }},
+            "location": {{ talk.location | jsonify }},
+            "href": {{ talk.url | absolute_url | jsonify }}
+        }{% if forloop.last == false %}, {% endif %}
+        {% endfor %}
+    ]
+}

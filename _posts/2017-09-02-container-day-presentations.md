@@ -2,6 +2,7 @@
 layout: post
 title: Container Day Presentations
 category: Talk
+location: Blacksburg, VA
 tags: [docker, talk]
 uuid: 6de1cf34-c7f0-47cb-8aca-c8c69a8071c8
 description: Presentation slides for the inaugural NRV ContainerDay event

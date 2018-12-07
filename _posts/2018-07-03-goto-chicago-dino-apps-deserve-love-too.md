@@ -1,6 +1,7 @@
 ---
 layout: post
 title: GOTO Chicago - Dino Apps Deserve Love Too
+location: Chicago, IL
 category: Talk
 tags: [docker]
 description: Docker is for microservices, right? Sure, but it's not JUST for them. In this talk, I talk about why your dino apps need love and the benefits you can gain by giving them love.

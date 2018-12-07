@@ -2,6 +2,7 @@
 layout: post
 title: Blacksburg Open Source Dev Conf - Collaborating with Docker 
 category: Talk
+location: Blacksburg, VA
 tags: [docker, talk]
 description: Presentation slides from talk given at the Blacksburg Open Source Dev Conference 
 excerpt: Presentation slides from talk given at the Blacksburg Open Source Dev Conference 

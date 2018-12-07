@@ -2,6 +2,7 @@
 layout: post
 title: VASCAN - Docker and Security
 category: Talk
+location: Blacksburg, VA
 tags: [docker, meetup]
 uuid: 3f2c8678-690b-4bd1-b304-8015c931c5f1
 description: Presentation slides given to the Virginia Alliance for Security Computing and Networking on September 28, 2017 on the Virginia Tech campus.

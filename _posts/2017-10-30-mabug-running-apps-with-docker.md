@@ -2,6 +2,7 @@
 layout: post
 title: MABUG - Running Apps with Docker 
 category: Talk
+location: Blacksburg, VA
 tags: [docker, talk]
 description: Presentation slides from talk given at the Mid-Atlantic Banner User Group. Take a look!
 excerpt: Presentation slides from talk given at the Mid-Atlantic Banner User Group. Take a look!
