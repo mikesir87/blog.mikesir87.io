@@ -9,7 +9,7 @@ layout: null
         {
             "title": {{ post.title | jsonify }},
             "date": {{ post.date | date: "%s" }},
-            "href": {{ post.url | absolute_url | jsonify }}
+            "href": {{ post.url | jsonify }}
         }{% if forloop.last == false %}, {% endif %}
         {% endfor %}
     ],
@@ -19,7 +19,7 @@ layout: null
             "title": {{ talk.title | jsonify }},
             "date": {{ talk.date | date: "%s" }},
             "location": {{ talk.location | jsonify }},
-            "href": {{ talk.url | absolute_url | jsonify }}
+            "href": {{ talk.url | jsonify }}
         }{% if forloop.last == false %}, {% endif %}
         {% endfor %}
     ]
