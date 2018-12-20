@@ -5,7 +5,7 @@ category: Blog Post
 tags: [docker]
 description: Here's a quick tip on how to join an ECS cluster at startup using EC2 tags
 excerpt: Here's a quick tip on how to join an ECS cluster at startup using EC2 tags
-image: /images/dockerconeu-2018.png
+image: /images/ec2-ecs-logos.png
 uuid: d1ebcb98-c5bd-4cdd-9673-26ec64fe89a9
 ---
 
