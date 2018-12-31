@@ -2,7 +2,7 @@
 layout: post
 title: Using EC2 Tags to Dynamically Join ECS Cluster
 category: Blog Post
-tags: [docker]
+tags: [docker,aws,ecs]
 description: Here's a quick tip on how to join an ECS cluster at startup using EC2 tags
 excerpt: Here's a quick tip on how to join an ECS cluster at startup using EC2 tags
 image: /images/ec2-ecs-logos.png
