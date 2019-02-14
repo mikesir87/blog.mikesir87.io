@@ -11,7 +11,7 @@ uuid: b8db6549-5ce4-42b0-b256-22e1572eca4e
 
 This was a talk given at the Docker Blacksburg meetup on Feb 13, 2019. It was a great event and our biggest turnout so far!
 
-![Michael Irwin giving the talk about 12-factor apps](/images/twelve-factor-app-resenting.jpg)
+![Michael Irwin giving the talk about 12-factor apps](/images/twelve-factor-app-presenting.jpg)
 
 
 ## Abstract
