@@ -9,6 +9,11 @@ image: /images/twelve-factor-overview.png
 uuid: b8db6549-5ce4-42b0-b256-22e1572eca4e
 ---
 
+This was a talk given at the Docker Blacksburg meetup on Feb 13, 2019. It was a great event and our biggest turnout so far!
+
+![Michael Irwin giving the talk about 12-factor apps](/images/twelve-factor-app-resenting.jpg)
+
+
 ## Abstract
 
 Developing applications is tough. Especially in the ever-changing environments. We have local development. QA validation. Pre-prod/staging. Production. But, how do we ensure our applications work the same everywhere? While containers help out, they aren't the only thing to keep in mind. The folks at Heroku, in 2011, published "The Twelve-Factor App", which has become the standard for building cloud-native applications. 
