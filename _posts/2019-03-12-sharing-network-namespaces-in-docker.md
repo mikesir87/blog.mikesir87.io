@@ -9,7 +9,7 @@ image: /images/apache-proxing-to-app.png
 uuid: 78d02cb0-7849-4d04-9238-7e97bc0a76b2
 ---
 
-I recently wanted to test how two containers would interact when running in a single task definition in ECS, but on my own machine (more details on that below). What makes that tricky is that, on ECS, multiple containers in the same task definition [share the same network namespace](https://aws.amazon.com/blogs/compute/under-the-hood-task-networking-for-amazon-ecs/). So, how do you do that locally? This same dilemma exists if you want to mock internal pod communication in Kubernetes (shared namesapces again).
+I recently wanted to test how two containers would interact when running in a single task definition in ECS using awsvpc mode, but on my own machine (more details on that below). What makes that tricky is that, on ECS in awsvpc mode, all of the containers in the same task definition [share the same network namespace](https://aws.amazon.com/blogs/compute/under-the-hood-task-networking-for-amazon-ecs/). So, how do you do that locally? This same dilemma exists if you want to mock internal pod communication in Kubernetes (shared namesapces again).
 
 But first... what am I talking about?
 
@@ -38,7 +38,7 @@ Containers can share the same network namespace. A few things to know/clarify:
 As mentioned earlier, shared network namespaces are used when:
 
 - Running multiple containers in a Kubernetes pod
-- Running multiple containers within a single ECS task definition
+- Running multiple containers within a single ECS task definition using awsvpc networking mode
 
 
 ## Sharing network namespaces with Docker
