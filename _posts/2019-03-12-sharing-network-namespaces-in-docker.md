@@ -16,7 +16,11 @@ But first... what am I talking about?
 
 ## Network namespace overview
 
-Containers use lots of namespaces to change how a process views resources on the system. One of those is the network namespace. Diego Pino García actually has [a great blog post](https://blogs.igalia.com/dpino/2016/04/10/network-namespaces/) in which he shows how to build and use the namespaces from scratch. So, if you're not quite familiar with the namespaces, **seriously... go read the post.**
+Containers use a lot of Linux namespaces to change how a process views resources on the system. One of those is the network namespace. Rather than rewriting what's already been written, go read this [great blog post by Diego Pino García](https://blogs.igalia.com/dpino/2016/04/10/network-namespaces/) in which he shows how to build and use network namespaces from scratch. If you're not quite familiar with the network namespace, **seriously... go read the post.**
+
+<div class="alert alert-info" markdown="1">
+And just to fully clarify, we're talking about _Linux_ namespaces here, not any other sort of administrative namespaces (like those seen in Kubernetes).
+</div>
 
 
 ## Sharing network namespaces
@@ -75,7 +79,7 @@ Yes, this a "stupid" example here, but it gets the point across. You can try thi
 
 ## My use case - Auth Sidecar
 
-So, back to my original reasoning to go on this journey... I have a fairly simple Node application that we want to add CAS (think single sign-on) support to allow only certain users to access the app. However, there is no official Node CAS client and we'd rather not 1) use someone else's or 2) write our own. Since Apache has an officially supported module, we decided to create a small Apache container, install the `mod_auth_cas`, and then proxy all traffic to the underlying application. So, traffic looks something like this...
+So, back to my original reasoning to go on this journey... I have a fairly simple Node application that we want to add CAS support (think single sign-on) to allow only certain users to access the app. However, there is no official Node CAS client and we'd rather not 1) use someone else's or 2) write our own. Since Apache has an officially supported module, we decided to create a small Apache container, install the `mod_auth_cas`, and then proxy all traffic to the underlying application. So, traffic looks something like this...
 
 <div class="text-center" markdown="1">
 ![Apache proxying to app in same namespace](/images/apache-proxing-to-app.png)
