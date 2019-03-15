@@ -25,7 +25,7 @@ Summit is composed of many components, most of which are different front-end cli
 
 With all of these components, we built a single `docker-compose.yml` file that is using the latest image for each service. It's kept up-to-date using automated pipelines and is done on a per-feature-branch capability. This makes it easy to switch all components when changing feature branches. The automation setup will be the topic for another blog post. (_nice teaser, huh?_)
 
-With this, if any developer on our team were to push an update to th API, the compose file is updated to have the api service use the new image (we tag images using git commit hashes). The Docker App is then published.
+With this, if any developer on our team were to push an update to the API, the compose file is updated to have the api service use the new image (we tag images using git commit hashes). The Docker App is then published.
 
 <div class="row multi-column-code">
 <div class="col-md-5" markdown="1">
