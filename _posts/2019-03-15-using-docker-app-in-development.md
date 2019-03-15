@@ -5,7 +5,7 @@ category: Blog Post
 tags: [docker]
 description: My dev team has been using Docker App for 8 months and it has changed everything. Here's what our environment looks like now.
 excerpt: My dev team has been using Docker App for 8 months and it has changed everything. Here's what our environment looks like now.
-image: /images/apache-proxing-to-app.png
+image: /images/summit-in-a-box-services-swapped-out.png
 uuid: e36bc36b-1ff3-4fbd-a5cb-9a8debd1a3a1
 ---
 
