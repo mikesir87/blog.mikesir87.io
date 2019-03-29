@@ -1,6 +1,7 @@
 name: mikesir87's blog
 
 description: Posts from Michael Irwin
+incremental: true
 
 links:
   dribbble:
