@@ -2,7 +2,7 @@
 layout: post
 title: Using Docker App in Development
 category: Blog Post
-tags: [docker]
+tags: [docker, summit]
 description: My dev team has been using Docker App for 8 months and it has changed everything. Here's what our environment looks like now.
 excerpt: My dev team has been using Docker App for 8 months and it has changed everything. Here's what our environment looks like now.
 image: /images/summit-in-a-box-services-swapped-out.png
@@ -23,7 +23,7 @@ Summit is composed of many components, most of which are different front-end cli
 ![Summit Architecture](/images/summit-application-architecture.png)
 </div>
 
-With all of these components, we built a single `docker-compose.yml` file that is using the latest image for each service. It's kept up-to-date using automated pipelines and is done on a per-feature-branch capability. This makes it easy to switch all components when changing feature branches. The automation setup will be the topic for another blog post. (_nice teaser, huh?_)
+With all of these components, we built a single `docker-compose.yml` file that is using the latest image for each service. It's kept up-to-date using automated pipelines and is done on a per-feature-branch capability. This makes it easy to switch all components when changing feature branches. The automation setup will be the topic for (another blog post)[/2019/03/keeping-docker-app-updated/]. (_nice teaser, huh?_)
 
 With this, if any developer on our team were to push an update to the API, the compose file is updated to have the api service use the new image (we tag images using git commit hashes). The Docker App is then published.
 
@@ -160,7 +160,7 @@ Now, if I run `docker-compose up` in the desktop repo, I'll start this dev-ready
 By adopting and taking advantage of Docker App, we're able keep our environments even more consistent by doing the following:
 
 1. Upstream components build container images
-2. Updated images are reflected in the deployed Summit Docker App (blog post on that soon)
+2. Updated images are reflected in the deployed Summit Docker App ((blog post on how we do that here)[/2019/03/keeping-docker-app-updated/]).
 3. Developers can pull the latest Docker-app for any feature branch and determine services to disable.
 4. Developers can then spin up dev-focused containers to replace any upstream service.
 
