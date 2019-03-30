@@ -18,6 +18,9 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
+    {% for style in page.extra_styles %}
+      <link rel="stylesheet" href="{{ style }}" />
+    {% endfor %}
   </head>
 
   <body>
@@ -62,5 +65,8 @@
     <script src="{{ site.baseurl }}/highlight/highlight.pack.js"></script>
     <script>hljs.configure({useBR:false});hljs.initHighlightingOnLoad();</script>
     <script id="dsq-count-scr" src="//mikesir87blog.disqus.com/count.js" async></script> 
+    {% for script in page.extra_scripts %}
+      <script src="{{ script }}" type="text/javascript"></script>
+    {% endfor %}
   </body>
 </html>

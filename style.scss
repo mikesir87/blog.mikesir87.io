@@ -116,3 +116,46 @@ h1.entry-title {
   width: 100%;
   height: 100%;
 }
+
+.flexslider .slides {
+  zoom: 1;
+  border: 1px solid #333;
+  margin-bottom: 10px;
+  background-color: #333;
+  color: white;
+}
+
+.flexslider .slides img {
+  height: auto;
+  width: 60%;
+  float: left;
+}
+
+.flex-caption {
+  padding: 15px;
+}
+
+ul.slides > li {
+  display: flex !important;
+  flex-direction: row;
+  width: 100%;
+}
+
+.flex-image {
+  width: 550px;
+  flex-shrink: 0;
+  background-color: white;
+}
+
+.flexslider .flex-direction-nav a {
+  height: 60px;
+}
+
+@media (max-width: 992px) {
+  ul.slides > li {
+    flex-direction: column;
+  }
+  .flex-image {
+    width: 100%;
+  }
+}
