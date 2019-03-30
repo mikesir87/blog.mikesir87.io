@@ -182,6 +182,7 @@ When we first deployed the new environment back in December, we were actually sp
 
 We learned quite a few things, as this was our first endeavour leveraging this many AWS services and being this elastic and responsive. Here are a few items, in no particular order...
 
+- None of this would have been possible without containers. If you're not using them yet, start now. The stacks are in containers. Traefik and the launcher are containers. It's containers everywhere. That's how you _should_ do cloud.
 - We're now big fans of Terraform. We used it setup the base infrastructure and to run several of our tasks.
 - Fargate is awesome for on-demand environments that come and go. It's fast. It's quick. There's no infrastructure to worry about! Use it.
 - Using SQS (and an event-driven design) was a great choice! If I ever needed to debug something, I could always open the SQS console, send a message manually, see what's in the queue, flush a queue. Make sure you setup a dead-letter queue to know when things fail too!
