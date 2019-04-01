@@ -41,7 +41,7 @@ As I presented what we've done to others, I realized the best way to convey the 
                 <ul>
                   <li>An ALB sends traffic to an ECS service running Traefik</li>
                   <li>Traefik is running in ECS mode, so polls ECS to update its routing config</li>
-                  <li>Stack containers are running using Fargate</li>
+                  <li>Stack containers are running in Fargate</li>
                   <li>The API container requires PostgreSQL (RDS)</li>
                 </ul>
           </div>
@@ -64,8 +64,8 @@ As I presented what we've done to others, I realized the best way to convey the 
                 <img src="/images/summit-qa/architecture-03.png" />
               </div>
               <div class="flex-caption">
-                <p>On the other side of the queue is a Lambda function. Basically, it's a state machine (depicted below).</p>
-                <p>This function stores its state in RDS (since it's already there) and determines how to respond to the event.</p>
+                <p>On the other side of the queue is a Lambda function. Basically, it's a state machine (depicted below) and determines how to respond to the event.</p>
+                <p>Since we are already using RDS for our stacks, we store our function state there as well.</p>
               </div>
          </li>
         <li>
@@ -74,7 +74,7 @@ As I presented what we've done to others, I realized the best way to convey the 
               </div>
               <div class="flex-caption">
                 <p>For each task that's needed, an event is published to a "tasks" SQS queue.</p>
-                <p>Another Lambda function processes each task and, in parallel, accomplishes the task using either Terraform or by invoking additional functions.</p>
+                <p>Another Lambda function processes each task. Tasks are executed in parallel using either Terraform or by invoking additional functions.</p>
               </div>
          </li>
         <li>
@@ -108,7 +108,7 @@ As I presented what we've done to others, I realized the best way to convey the 
                 <img src="/images/summit-qa/architecture-08.png" />
               </div>
               <div class="flex-caption">
-                <p>We add a CloudWatch subscription to trigger a Lambda function that processes batches of access logs, determines the stacks that were accessed, and publishes an <code>ACCESS</code> event.</p>
+                <p>A CloudWatch subscription triggers a Lambda function that processes batches of access log messages. The function determines the stacks that were accessed and publishes an <code>ACCESS</code> event.</p>
                 <p>The state machine stores the "last accessed time" as metadata for the stack.</p>
               </div>
          </li>
@@ -125,7 +125,7 @@ As I presented what we've done to others, I realized the best way to convey the 
                 <img src="/images/summit-qa/architecture-10.png" />
               </div>
               <div class="flex-caption">
-                <p>For each stack that hasn't been accessed recently, it publishes a <code>FREEZE</code> event. The state machine then sends tasks to update the ECS services for the stack to a desired count of 0.</p>
+                <p>For each stack that hasn't been accessed recently, it publishes a <code>FREEZE</code> event. The state machine then executes tasks to update the ECS services for the stack to a desired count of 0.</p>
               </div>
          </li>
         <li>
@@ -142,7 +142,7 @@ As I presented what we've done to others, I realized the best way to convey the 
                 <img src="/images/summit-qa/architecture-12.png" />
               </div>
               <div class="flex-caption">
-                <p>Using <code>traefik.frontend.priority</code> labels on our containers, we can create a "fall-through" container for Traefik. In other workds, our <em>actual</em> stack containers have a higher priority, so take precedence. But, if they're not up, the "Launcher" handles the request (which has a low priority).</p>
+                <p>Using <code>traefik.frontend.priority</code> labels on our containers, we can create a "fall-through" container for Traefik. Our <em>actual</em> stack containers have a higher priority, so take precedence. If a stack is not up, the "Launcher" handles the request (which has a low priority).</p>
               </div>
          </li>
         <li>
@@ -150,8 +150,8 @@ As I presented what we've done to others, I realized the best way to convey the 
                 <img src="/images/summit-qa/architecture-13.png" />
               </div>
               <div class="flex-caption">
-                <p>When a request comes in to the "launcher", it looks at the requested host (each stack has its own subdomain) and determines if the stack is frozen. If it is, a <code>RESUME</code> event is published.</p>
-                <p>The state machine sends a task to scale the service back up and eventually...</p>
+                <p>When a request comes in to the "launcher", it determines the stack for the requested host (each is on its own subdomain). If the stack is frozen, a <code>RESUME</code> event is published.</p>
+                <p>The state machine executes a task to scale the service back up and eventually...</p>
               </div>
          </li>
         <li>
@@ -160,7 +160,7 @@ As I presented what we've done to others, I realized the best way to convey the 
               </div>
               <div class="flex-caption">
                 <p>BOOM! The stack has spun back up, Traefik discovers it, and our QA team can continue testing.</p>
-                <p>With our applications, the time to send the <code>RESUME</code> event to a running application is about 2.5 minutes, most of which is starting the API.</p>
+                <p>With our applications, the elapsed time from sending a <code>RESUME</code> event to a running application is about 2.5 minutes, most of which is starting the API.</p>
               </div>
          </li>
     </ul>
@@ -169,14 +169,14 @@ As I presented what we've done to others, I realized the best way to convey the 
 
 ## The State Machine
 
-In case you're wondering what the full state machine looks like, here you go! In each state's box contains the tasks that are needed in order to advance to the next state. Click on it for a larger version.
+In case you're wondering what the full state machine looks like, here you go! In each state's box, it contains the tasks that are needed in order to advance to the next state. Click on it for a larger version.
 
-[![The State Machine for our QA environment](/images/summit-qa/state-machine.png)](/images/summit-qa-state-machine.png)
+[![The State Machine for our QA environment](/images/summit-qa/state-machine.png)](/images/summit-qa/state-machine.png)
 
 
 ## Why Fargate?
 
-When we first deployed the new environment back in December, we were actually spinning up an EC2 machine for each and every stack. It worked quite well, but in January, [Fargate dropped their prices quite significantly](https://aws.amazon.com/blogs/compute/aws-fargate-price-reduction-up-to-50/). That made it a no-brainer to go straight to Fargate. In addition, it _significantly_ reduced the time it took to initially launch and resume a stack.
+When we first deployed the new environment back in December, we were actually spinning up an EC2 machine for each and every stack. It worked quite well, but in January, [Fargate dropped their prices quite significantly](https://aws.amazon.com/blogs/compute/aws-fargate-price-reduction-up-to-50/). That made it a no-brainer to switch to Fargate. While no longer needing to manage infrastructure, it has _significantly_ reduced the time to initially launch and resume a stack.
 
 ## A few takeaways
 
