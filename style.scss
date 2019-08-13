@@ -176,14 +176,16 @@ pre[class*=language-]:before {
 
 ul.slides > li {
   display: flex !important;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
 }
 
 .flex-image {
-  width: 550px;
-  flex-shrink: 0;
+  flex-shrink: 1;
   background-color: white;
+  img {
+    margin-bottom: 0;
+  }
 }
 
 .flexslider .flex-direction-nav a {
