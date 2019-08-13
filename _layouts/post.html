@@ -3,46 +3,47 @@ hide_sidebar: true
 layout: default
 ---
 
-<article class="post">
-  <div class="blog-item-wrap">
-    <div class="post-card-header">
-      <a href="/"><i class="fa fa-arrow-left"></i>&nbsp;&nbsp;Back to list of posts</a>
-    </div>
-    <div class="post-inner-content">
-      <header class="entry-header page-header">
-        <h1 class="entry-title">{{ page.title }}</h1>
-        <div class="entry-meta">
-          <span class="posted-on"><i class="fa fa-calendar"></i>&nbsp;{{ page.date | date: "%B %e, %Y" }}</span>
-          <span class="comments-link"> 
-            <i class="fa fa-comment-o"></i>&nbsp;<a href="#disqus_thread" data-disqus-identifier="{{ page.uuid }}"></a>
-          </span>
-          {% if page.categories != empty %}
-            <span class="cat-links">
-              <i class="fa fa-folder-open-o"></i>
-              {% for category in page.categories %}
-                <a href="{{ site.url }}/category/{{ category | cgi_encode }}" title="Posts in category {{ category }}">{{ category | capitalize }}</a>
-              {% endfor %}
-            </span>
-          {% endif %}
-        </div>
-      </header>
-      <div class="entry-content">
-        {{ content }}
-      </div>
-
-      <footer class="entry-meta">
-        {% if page.tags != empty %}
-          <div class="tagcloud">
-            {% for tag in page.tags %}
-              <a href="{{site.url}}/tags/{{ tag | cgi_encode }}" title="Posts tagged {{ tag }}" rel="tag">{{tag}}</a>
-            {% endfor %}
-          </div>
-        {% endif %}
-      </footer>
-    </div>
-
-    <div class="post-inner-content secondary-content-box">
-      {% include disqus.html %}
-    </div>
+<header class="entry-header page-header">
+  <p>
+    <small>
+      <a href="/"><i class="fa fa-arrow-left"></i>&nbsp; Back to list of postings</a>
+    </small>
+  </p>
+  <h1 class="entry-title">{{ page.title }}</h1>
+  <div class="entry-meta">
+    <ul class="list-inline">
+      <li class="list-inline-item posted-on"><i class="fa fa-calendar"></i>&nbsp;{{ page.date | date: "%B %e, %Y" }}</li>
+      <li class="list-inline-item comments-link"> 
+        <i class="fa fa-comment-o"></i>&nbsp;<a href="#disqus_thread" data-disqus-identifier="{{ page.uuid }}"></a>
+      </li>
+      {% if page.categories != empty %}
+        <li class="list-inline-item cat-links">
+          <i class="fa fa-folder-open-o"></i>
+          {% for category in page.categories %}
+            <a href="{{ site.url }}/category/{{ category | cgi_encode }}" title="Posts in category {{ category }}">{{ category | capitalize }}</a>
+          {% endfor %}
+        </li>
+      {% endif %}    
+    </ul>
   </div>
-</article>
+</header>
+
+<section class="entry-content">
+  {{ content }}
+</section>
+
+<section class="entry-meta">
+  {% if page.tags != empty %}
+    <ul class="list-inline">
+      {% for tag in page.tags %}
+        <li class="list-inline-item">
+          <a href="{{site.url}}/tags/{{ tag | cgi_encode }}" title="Posts tagged {{ tag }}" rel="tag">{{tag}}</a>
+        </li>
+      {% endfor %}
+    </div>
+  {% endif %}
+</section>
+
+<section class="comments">
+  {% include disqus.html %}
+</section>

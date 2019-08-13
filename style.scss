@@ -1,19 +1,36 @@
 ---
 ---
 
-
-@import "bootstrap";
-@import "sparkling";
-@import "sparkling-overrides";
-
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: Raleway, sans-serif;
-  font-weight: 600;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+
+  a {
+    color: #0056b3;
+  }
+
+  small {
+    font-size: .6em;
+  }
 }
 
 body {
-  font-family: Lato, sans-serif;
-  font-size: 18px;
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  line-height: 1.8em;
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 2em;
+}
+
+img, iframe, twitter-widget {
+  box-shadow: 0 0 0.5em #999;
+}
+
+.navbar {
+  margin-bottom: 30px;
 }
 
 strong {
@@ -27,12 +44,15 @@ pre.no-wrap code {
 
 pre {
   position: relative;
-  margin-left: -50px;
-  margin-right: -50px;
   border: 0px;
   background-color: #282b2e;
   padding: 15px 20px;
   border-radius: 0px;
+  line-height: 1.5em;
+}
+
+code {
+  font-family: Hack, monospace;
 }
 
 .multi-column-code {
@@ -91,11 +111,24 @@ pre[class*=language-]:before {
 }
 
 .entry-meta {
-  margin-bottom: 0;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-left: 0;
+  border-right: 0;
+  padding: .3em 1em;
+  font-size: .8em;
+
+  ul.list-inline {
+    margin-bottom: 0; 
+
+    li.list-inline-item:not(:last-child) {
+      margin-right: 1.5em;
+    }
+  }
 }
 
-h1.entry-title {
-  margin-bottom: 10px;
+.entry-title {
+  margin-bottom: .5em;
 }
 
 .entry-content {
@@ -104,6 +137,12 @@ h1.entry-title {
 
 .navbar>.container .navbar-brand {
   font-family: "Lato", sans-serif;
+}
+
+.post {
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: 1px dashed #ccc;
 }
 
 .post-card-header {
@@ -164,4 +203,18 @@ ul.slides > li {
   .flex-caption {
       display: block;
   }
+}
+
+.alert p:last-child {
+  margin-bottom: 0;
+}
+
+twitter-widget, iframe {
+  margin-bottom: 1em !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comments iframe {
+  box-shadow: none;
 }

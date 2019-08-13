@@ -1,10 +1,11 @@
 ---
+wider: true
 layout: default
 ---
 
-<h1>Posts in category <em>{{ page.category | capitalize }}</em></h1>
+<h1 class="mb-5">All {{ page.category | capitalize }}s</h1>
 
-<ul>
+<ul class="ml-0 pl-0">
 {% for post in site.categories[page.category] %}
   {% include post-teaser.html post=post %}
 {% endfor %}

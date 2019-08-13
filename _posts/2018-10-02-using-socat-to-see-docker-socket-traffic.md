@@ -5,7 +5,6 @@ category: Blog Post
 tags: [docker]
 description: Quick pro-tip - use socat to "sniff" the Docker client/server traffic
 excerpt: Quick pro-tip - use socat to "sniff" the Docker client/server traffic
-image: /images/
 uuid: 6d1d2057-0a89-494a-b871-2cd2b3f9bc1c 
 ---
 

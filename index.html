@@ -1,22 +1,25 @@
 ---
-hide_sidebar: true
+wider: true
 layout: default
 ---
 
-<section class="post">
-  <div class="post-inner-content">
-    {% for post in site.posts %}
-      <div class="row blog-list-entry">
-        <div class="col-xs-12 col-md-8">
-          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        </div>
-        <div class="col-xs-6 col-md-2">
-          {{ post.date | date: "%b %e, %Y" }}
-        </div>
-        <div class="col-xs-6 col-md-2">
-          {{ post.category }}
-        </div>
-      </div>
+<section class="category-group">
+    <h2>Recent Blog Posts &nbsp; <small><a href="/category/Blog Post">View all blog posts <i class="fa fa-arrow-right"></i></a></small></h2>
+    
+    <hr class="mb-5" />
+  
+    {% for post in site.categories['Blog Post'] limit: 5 %}
+      {% include post-teaser.html post=post %}
     {% endfor %}
-  </div>
+  </section>
+
+<section class="category-group">
+  <h2>Recent Talks &nbsp; <small><a href="/category/Talk">View all talks <i class="fa fa-arrow-right"></i></a></small></h2>
+  
+  <hr class="mb-5" />
+
+  {% for post in site.categories['Talk'] limit: 5 %}
+    {% include post-teaser.html post=post %}
+  {% endfor %}
 </section>
+    

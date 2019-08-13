@@ -1,27 +1,33 @@
-    <article class="post">
-      <div class="blog-item-wrap">
-        <div class="post-inner-content">
-          <h1 class="entry-title"><a href="{{ site.baseurl }}{{ include.post.url }}">{{ include.post.title }}</a></h1>
-          <div class="entry-meta">
-            <span class="posted-on"><i class="fa fa-calendar"></i>&nbsp;{{ include.post.date | date: "%B %e, %Y" }}</span>
-            <span class="comments-link"><i class="fa fa-comment-o"></i>&nbsp;<a href="{{ site.baseurl}}{{ include.post.url }}#disqus_thread" data-disqus-identifier="{{ include.post.uuid }}">0 comments</a></span>
-            {% if post.categories != empty %}
-              <span class="cat-links">
-                <i class="fa fa-folder-open-o"></i>
-                {% for category in post.categories %}
-                  <a href="{{ site.url }}/category/{{ category | cgi_encode }}" title="Posts in category {{ category }}">{{ category | capitalize }}</a>
-                {% endfor %}
-              </span>
-            {% endif %}
-          </div>
-
-          <div class="entry">
-            {{ include.post.excerpt }}
-          </div>
-
-          <div class="clearfix">
-            <a href="{{ site.baseurl }}{{ include.post.url }}" class="btn btn-default read-more">Read More</a>
-          </div>
-        </div>
+<article class="post">
+  <div class="row">
+    <div class="col-sm-5 text-center">
+      {% if include.post.image %}
+      <img src="{{ include.post.image }}" title="Post Teaser Image" />
+      {% endif %}
+    </div>
+    <div class="col-sm-7">
+      <h2 class="entry-title">{{ include.post.title }}</h2>
+      <div class="entry-meta">
+        <ul class="list-inline">
+          <li class="list-inline-item posted-on"><i class="fa fa-calendar"></i>&nbsp;{{ include.post.date | date: "%b %e, %Y" }}</li>
+          <li class="list-inline-item comments-link"><i class="fa fa-comment-o"></i>&nbsp;<a href="{{ site.baseurl}}{{ include.post.url }}#disqus_thread" data-disqus-identifier="{{ include.post.uuid }}">0 comments</a></li>
+          {% if post.categories != empty %}
+            <li class="list-inline-item cat-links">
+              <i class="fa fa-folder-open-o"></i>
+              {% for category in post.categories %}
+                <a href="{{ site.url }}/category/{{ category | cgi_encode }}" title="Posts in category {{ category }}">{{ category | capitalize }}</a>
+              {% endfor %}
+            </li>
+          {% endif %}
+        </ul>
       </div>
-    </article>
+      
+      <p>
+        {{ include.post.excerpt }}
+      </p>
+      <p>
+        <a href="{{ site.baseurl }}{{ include.post.url }}" class="btn btn-dark read-more">Read More &nbsp;<i class="fa fa-arrow-right"></i></a>
+      </p>
+    </div>
+  </div>
+</article>

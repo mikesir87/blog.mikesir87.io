@@ -31,7 +31,9 @@ Feeling overwhelmed while getting started with containers? Have you been tasked 
 
 ## Video Recording
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6gJs0F8V3tM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="text-center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6gJs0F8V3tM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Slides
 

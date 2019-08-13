@@ -8,7 +8,7 @@ excerpt: In my last post, I talked about how we're using Docker App in developme
 image: /images/summit-env-update-high-level.png
 uuid: 2bb50145-a472-4c2b-9b16-088ed11a46e6
 ---
-
+ 
 In my [previous post](/2019/03/using-docker-app-in-development/), I talked about the benefits in local development when we adopted the use of Docker App. In this post, I'm talking about how we keep it all up-to-date via our automated CI/CD pipelines.
 
 
@@ -111,7 +111,7 @@ services:
       sourced-by: CREST-1234
 </code></pre>
 
-Whenever one of the upstream branches is deleted (either from merging of code or actual deletion), GitLab (wants to destroy the environment)[https://docs.gitlab.com/ee/ci/environments.html#stopping-an-environment]. The script makes the same call as before, but with an `ACTION=undeploy`. The `update-stack` build then:
+Whenever one of the upstream branches is deleted (either from merging of code or actual deletion), GitLab [wants to destroy the environment](https://docs.gitlab.com/ee/ci/environments.html#stopping-an-environment). The script makes the same call as before, but with an `ACTION=undeploy`. The `update-stack` build then:
 
 1. Removes the `sourced-by` label for `$UPDATED_SERVICE`
 2. If no `sourced-by` labels remain, the environment is no longer needed. The branch is deleted.
