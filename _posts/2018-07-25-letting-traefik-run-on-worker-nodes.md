@@ -9,6 +9,10 @@ image: /images/traefik-logo.png
 uuid: 97238912-f7f9-4c30-9c2b-8ed257a8205e
 ---
 
+<div class="alert alert-info" markdown="1">
+**NOTE:** I've written [a new post](/2019/08/running-traefik-on-worker-nodes-more-securely/) that updates this post with a better implementation. However, the information here is still valid on _why_ you want to run Traefik on worker nodes. So, read this post first and jump over to the new one.
+</div>
+
 Traefik ([traefik.io](https://traefik.io)) is a _fantastic_ tool and one I've used on many projects. It just works really well and is easy to configure. In Docker mode, it listens to events and automatically reconfigures itself to allow traffic to be sent to new services and/or containers. Deploying a microserviced application is a breeze.
 
 However, in order for it to listen, you often see Docker Compose files looking like this...
