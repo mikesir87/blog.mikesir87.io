@@ -280,3 +280,5 @@ And with that, we should have a running monitor! We can deploy apps to the `defa
 ## Conclusion
 
 I hope you enjoyed it! Am I going to run this app forever in production? Probably not. But, it was a fun experiment to try and learn how to connect to the Kubernetes API from inside of a container and reflect the current status of the cluster. I've even deployed applications that randomly fail and I can see the removal and restart of the pod just by looking at the lights!
+
+Oh... and if you want to check out the full source code, you can [go to the GitHub repo here](https://github.com/mikesir87/kube-light-monitor)!
