@@ -1,4 +1,4 @@
-<article class="post">
+<article class="post teaser">
   <div class="row">
     <div class="col-sm-5 text-center">
       {% if include.post.image %}
@@ -6,7 +6,7 @@
       {% endif %}
     </div>
     <div class="col-sm-7">
-      <h2 class="entry-title">{{ include.post.title }}</h2>
+      <h2 class="entry-title"><a href="{{ site.baseurl }}{{ include.post.url }}">{{ include.post.title }}</a></a></h2>
       <div class="entry-meta">
         <ul class="list-inline">
           <li class="list-inline-item posted-on"><i class="fa fa-calendar"></i>&nbsp;{{ include.post.date | date: "%b %e, %Y" }}</li>
