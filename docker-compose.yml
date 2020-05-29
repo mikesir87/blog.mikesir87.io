@@ -1,10 +1,12 @@
-version: '2'
+version: "3.8"
 
 services:
   app:
-    image: jekyll/jekyll
-    command: bash -c "gem install bundler:1.16.1 && bundle install && jekyll serve --future --drafts"
+    build:
+      context: ./
+      target: dev
     volumes:
       - ./:/srv/jekyll:cached
     ports:
       - 4000:4000
+      - 35729:35729
