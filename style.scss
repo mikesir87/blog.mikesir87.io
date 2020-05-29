@@ -223,11 +223,53 @@ twitter-widget, iframe {
   box-shadow: none;
 }
 
-.teaser {
-  .entry-title {
-    margin-top: 0;
+.teaser-card {
+  font-size: .8em;
+  line-height: 1.8em;
+  margin-bottom: 20px;
+  transition: .2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 1em #aaa;
   }
-}
+
+  img {
+    width: 100%;
+    height: 200px;
+    background: #c5d2d9 no-repeat 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin-bottom: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #eee;
+  }
+  
+  a {
+    color: black;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .entry-title {
+    font-size: 1.2em;
+  }
+
+  .excerpt {
+    height: 200px;
+    max-height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+
+  .card-footer {
+    padding: .5rem .75rem;
+    font-size: .8em;
+  }
+}  
 
 blockquote {
   padding-left: 15px;

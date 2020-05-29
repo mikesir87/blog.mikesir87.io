@@ -5,8 +5,12 @@ wider: true
 
 <h1>Posts tagged with <em>{{ page.tag }}</em></h1>
 
-<ul>
-{% for post in site.tags[page.tag] %}
-  {% include post-teaser.html post=post %}
-{% endfor %}
-</ul>
+<div class="teaser-feed container">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+    {% for post in site.tags[page.tag] %}
+      <div class="col">
+        {% include post-teaser.html post=post %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

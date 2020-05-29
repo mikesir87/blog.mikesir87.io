@@ -1,33 +1,28 @@
-<article class="post teaser">
-  <div class="row">
-    <div class="col-sm-5 text-center">
-      {% if include.post.image %}
-      <img src="{{ include.post.image }}" title="Post Teaser Image" />
-      {% endif %}
-    </div>
-    <div class="col-sm-7">
-      <h2 class="entry-title"><a href="{{ site.baseurl }}{{ include.post.url }}">{{ include.post.title }}</a></a></h2>
-      <div class="entry-meta">
-        <ul class="list-inline">
-          <li class="list-inline-item posted-on"><i class="fa fa-calendar"></i>&nbsp;{{ include.post.date | date: "%b %e, %Y" }}</li>
-          <li class="list-inline-item comments-link"><i class="fa fa-comment-o"></i>&nbsp;<a href="{{ site.baseurl}}{{ include.post.url }}#disqus_thread" data-disqus-identifier="{{ include.post.uuid }}">0 comments</a></li>
-          {% if post.categories != empty %}
-            <li class="list-inline-item cat-links">
-              <i class="fa fa-folder-open-o"></i>
-              {% for category in post.categories %}
-                <a href="{{ site.url }}/category/{{ category | cgi_encode }}" title="Posts in category {{ category }}">{{ category | capitalize }}</a>
-              {% endfor %}
-            </li>
-          {% endif %}
-        </ul>
-      </div>
-      
-      <p>
+<article class="teaser-card card">
+  {% if include.post.image != empty %}
+    <a class="card-img-top image-link" href="{{ site.baseurl }}{{ include.post.url }}">
+        <img src="{{ include.post.image }}" alt="{{ include.post.title }}" />
+    </a>
+  {% endif %}
+  <a href="{{ site.baseurl }}{{ include.post.url }}">
+    <div class="card-body">
+      <h2 class="card-title entry-title">{{ include.post.title }}</h2>
+      <div class="card-text excerpt">
         {{ include.post.excerpt }}
-      </p>
-      <p>
-        <a href="{{ site.baseurl }}{{ include.post.url }}" class="btn btn-dark read-more">Read More &nbsp;<i class="fa fa-arrow-right"></i></a>
-      </p>
+      </div>
     </div>
-  </div>
+  </a>
+  <footer class="card-footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col date">
+          <i class="fa fa-calendar"></i>&nbsp;{{ include.post.date | date: "%b %e, %Y" }}
+        </div>
+  
+        <div class="col comments text-right">
+          <i class="fa fa-comment-o"></i>&nbsp;<a href="{{ site.baseurl}}{{ include.post.url }}#disqus_thread" data-disqus-identifier="{{ include.post.uuid }}">0</a>
+        </div>  
+      </div>
+    </div>
+  </footer>
 </article>

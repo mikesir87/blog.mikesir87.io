@@ -8,18 +8,30 @@ layout: default
     
     <hr class="mb-5" />
   
-    {% for post in site.categories['Blog Post'] limit: 5 %}
-      {% include post-teaser.html post=post %}
-    {% endfor %}
-  </section>
+    <div class="teaser-feed container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        {% for post in site.categories['Blog Post'] limit: 6 %}
+          <div class="col">
+            {% include post-teaser.html post=post %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+</section>
 
 <section class="category-group">
   <h2>Recent Talks &nbsp; <small><a href="/category/Talk">View all talks <i class="fa fa-arrow-right"></i></a></small></h2>
   
   <hr class="mb-5" />
 
-  {% for post in site.categories['Talk'] limit: 5 %}
-    {% include post-teaser.html post=post %}
-  {% endfor %}
+  <div class="teaser-feed container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+      {% for post in site.categories['Talk'] limit: 6 %}
+        <div class="col">
+          {% include post-teaser.html post=post %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 </section>
     

@@ -5,8 +5,12 @@ layout: default
 
 <h1 class="mb-5">All {{ page.category | capitalize }}s</h1>
 
-<ul class="ml-0 pl-0">
-{% for post in site.categories[page.category] %}
-  {% include post-teaser.html post=post %}
-{% endfor %}
-</ul>
+<div class="teaser-feed container">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+    {% for post in site.categories[page.category] %}
+      <div class="col">
+        {% include post-teaser.html post=post %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
