@@ -14,7 +14,7 @@ layout: default
     <ul class="list-inline">
       <li class="list-inline-item posted-on"><i class="fa fa-calendar"></i>&nbsp;{{ page.date | date: "%B %e, %Y" }}</li>
       <li class="list-inline-item comments-link"> 
-        <i class="fa fa-comment-o"></i>&nbsp;<a href="#disqus_thread" data-disqus-identifier="{{ page.uuid }}"></a>
+        <i class="fa fa-comment-o"></i>&nbsp;<a href="#disqus_thread" data-disqus-identifier="{{ page.uuid }}">0 comments</a>
       </li>
       {% if page.categories != empty %}
         <li class="list-inline-item cat-links">
