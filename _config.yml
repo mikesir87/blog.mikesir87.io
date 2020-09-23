@@ -2,6 +2,7 @@ name: mikesir87's blog
 
 description: Posts from Michael Irwin
 incremental: true
+encoding: UTF-8
 
 links:
   dribbble:
@@ -31,6 +32,9 @@ permalink: /:year/:month/:title/
 excerpt_separator: <!--more-->
 
 version: v1.1.0
+
+kramdown:
+    smart_quotes: ["apos", "apos", "quot", "quot"]
 
 sass:
   style: :compressed # You might prefer to minify using :compressed
