@@ -30,6 +30,10 @@ img, iframe, twitter-widget {
   box-shadow: 0 0 0.5em #999;
 }
 
+.asciicast iframe {
+  box-shadow: none;
+}
+
 .navbar {
   margin-bottom: 30px;
 }
