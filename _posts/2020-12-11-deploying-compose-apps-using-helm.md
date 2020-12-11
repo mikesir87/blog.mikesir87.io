@@ -17,6 +17,8 @@ If you're here for just the demo, here's a quick recording for you...
 <script id="asciicast-LbE1xcLz4bVyt9hN3xqr13k8g" src="https://asciinema.org/a/LbE1xcLz4bVyt9hN3xqr13k8g.js" async></script>
 </div>
 
+The chart (with its additional documentation) [can be found here](https://github.com/mikesir87/helm-charts/compose-deployer).
+
 ## Some Quick Background/Context
 
 In my recent work, I've been working to help build out a platform that application teams at Virginia Tech can use to deploy their applications. At the same time, we've been working on move to the public cloud (AWS as the preferred choice). With this, many tough questions have come up, such as...
