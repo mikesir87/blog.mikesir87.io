@@ -1,6 +1,6 @@
 FROM jekyll/jekyll AS base
 RUN gem install bundler:1.16.1
-COPY Gemfile Gemfile.lock ./
+COPY Gemfile ./
 RUN bundle install
 
 FROM base AS dev
