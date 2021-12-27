@@ -10,7 +10,9 @@ image: /images/karpenter-with-terraform.png
 uuid: 7a523daa-c7c2-46fa-abe1-380812c0158c
 ---
 
-<div class="alert alert-info">This is written to deploy Karpenter 0.5.1, which may be an old version by the time you read this. I'll most likely update this over time, but refer to the docs for updated information.</div>
+<div class="alert alert-info" markdown="1">
+I have since contributed this writeup to the official Karpenter docs ([check it out here](https://karpenter.sh/docs/getting-started-with-terraform/)). It still lives here for historical reasons.
+</div>
 
 ## About Karpenter
 
