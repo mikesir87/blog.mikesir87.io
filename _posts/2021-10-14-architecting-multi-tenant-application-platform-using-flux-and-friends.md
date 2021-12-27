@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Architecting a Multi-tenant Application Platform using Flux and Friends
+title: KubeCon 2021 NA - Architecting a Multi-tenant Application Platform using Flux and Friends
 location: Virtual
 category: Talk
 tags: [platform, flux]
