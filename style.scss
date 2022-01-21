@@ -26,6 +26,15 @@ img, svg {
   margin-bottom: 2em;
 }
 
+figure {
+  margin-bottom: 2em;
+  font-style: italic;
+  font-size: .8em;
+  img {
+    margin-bottom: 0;
+  }
+}
+
 img, iframe, twitter-widget {
   box-shadow: 0 0 0.5em #999;
 }
