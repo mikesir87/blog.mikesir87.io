@@ -47,7 +47,7 @@ First off, there's no _true_ concept of a node pool within Karpenter. It's simpl
   - A `NoSchedule` taint with key `node-pool` and value `pool-b`
   - A label with key `node-pool` and value `pool-b`
 
-The taint prevents kube-scheduler from scheduling pods onto the node unless the pod specifically says its ok using a toleration. The label lets us force the pod onto the node using a nodeSelector or podAffinity.
+The taint prevents kube-scheduler from scheduling pods onto the node unless the pod specifically says its ok using a toleration. The label lets us force the pod onto the node using a nodeSelector or nodeAffinity.
 
 So... how do we do this using Karpenter? Assuming you followed one of the [Getting Started guides](https://karpenter.sh/docs/getting-started/), we can define PoolA with the following Provisioner:
 
