@@ -40,6 +40,7 @@ Quick warning... this gets into deep internals of Docker Desktop, so be careful!
         omitStages:
           - "RequestReceived"
     EOF
+    ```
 
 1. Now, we are going to navigate to `/etc/kuberentes/manifests`. These are manifests that are manually applied by kubelet ([learn more about "static pods" here](https://kubernetes.io/docs/tasks/configure-pod-container/static-pod/)). If we make changes to any of these manifests, the changes will be applied automatically, as kubelet is watching this directory.
 
