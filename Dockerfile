@@ -1,10 +1,11 @@
-FROM jekyll/jekyll AS base
-RUN gem install bundler:1.16.1
+FROM ruby:2.7 AS base
+RUN gem install bundler
 COPY Gemfile ./
 RUN bundle install
+WORKDIR /srv/jekyll
 
 FROM base AS dev
-CMD [ "jekyll", "serve", "--future", "--drafts", "--livereload" ]
+CMD [ "jekyll", "serve", "--future", "--drafts", "--livereload", "-H", "0.0.0.0" ]
 
 FROM base AS build
 COPY . .
